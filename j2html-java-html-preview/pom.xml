@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dev.rebelcraft</groupId>
+        <artifactId>j2html-extensions</artifactId>
+        <version>0.0.4-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>j2html-java-html-preview</artifactId>
+    <packaging>jar</packaging>
+    <name>j2html-java-html-preview</name>
+
+    <properties>
+        <preview.api.version>0.0.2</preview.api.version>
+    </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>dev.rebelcraft</groupId>
+            <artifactId>java-html-preview-api</artifactId>
+            <version>${preview.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.j2html</groupId>
+            <artifactId>j2html</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
