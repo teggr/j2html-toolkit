@@ -1,6 +1,11 @@
 # j2html-template-engine
 A template engine for the j2html library.
 
+Repository module locations:
+
+- Core engine module: `j2html-template-engine/j2html-engine-core`
+- Spring modules: `spring/j2html-engine-spring` and `spring/j2html-engine-spring-boot-starter`
+
 ## Install
 
 Use the artifact that matches your stack:

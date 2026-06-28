@@ -31,10 +31,9 @@
         <module>j2html-extensions-tools</module>
         <module>rebel-ui-test</module>
         <module>integrations</module>
+        <module>spring</module>
         <module>j2html-template-engine</module>
-        <module>j2html-extensions-spring-boot-starter</module>
         <module>j2html-extensions-bom</module>
-        <module>j2html-example-webapp</module>
     </modules>
 
     <dependencyManagement>

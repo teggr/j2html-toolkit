@@ -9,12 +9,15 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-template-engine</artifactId>
+    <artifactId>spring</artifactId>
     <packaging>pom</packaging>
-    <name>j2html-template-engine</name>
+    <name>spring</name>
 
     <modules>
-        <module>j2html-engine-core</module>
+        <module>j2html-example-webapp</module>
+        <module>j2html-extensions-spring-boot-starter</module>
+        <module>j2html-engine-spring</module>
+        <module>j2html-engine-spring-boot-starter</module>
     </modules>
 
     <properties>
