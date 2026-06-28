@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>integrations</artifactId>
+        <artifactId>j2html-integrations</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bootstrap-j2html-extension</artifactId>
-    <name>bootstrap-j2html-extension</name>
+    <artifactId>j2html-bootstrap</artifactId>
+    <name>j2html-bootstrap</name>
 
     <properties>
         <!-- aligned with the boostrap version -->
@@ -29,7 +29,7 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions-core</artifactId>
+            <artifactId>j2html-extensions</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -56,7 +56,7 @@
                 <dependencies>
                     <dependency>
                         <groupId>dev.rebelcraft</groupId>
-                        <artifactId>j2html-extensions-tools</artifactId>
+                        <artifactId>j2html-integration-tools</artifactId>
                         <version>${project.version}</version>
                     </dependency>
                     <dependency>

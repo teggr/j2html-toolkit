@@ -26,7 +26,7 @@
         <dependencies>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-extensions-bom</artifactId>
+                <artifactId>j2html-toolkit-bom</artifactId>
                 <version>0.0.4-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -75,11 +75,11 @@
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>bootstrap-j2html-extension</artifactId>
+            <artifactId>j2html-bootstrap</artifactId>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>htmx-j2html-extension</artifactId>
+            <artifactId>j2html-htmx</artifactId>
         </dependency>
 
     </dependencies>

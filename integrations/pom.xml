@@ -10,11 +10,12 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>integrations</artifactId>
-    <name>integrations</name>
+    <artifactId>j2html-integrations</artifactId>
+    <name>j2html-integrations</name>
     <packaging>pom</packaging>
 
     <modules>
+        <module>tools</module>
         <module>bootstrap</module>
         <module>htmx</module>
     </modules>

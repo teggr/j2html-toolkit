@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>spring</artifactId>
+        <artifactId>j2html-spring</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
@@ -29,17 +29,17 @@
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions-core</artifactId>
+            <artifactId>j2html-extensions</artifactId>
             <version>0.0.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>bootstrap-j2html-extension</artifactId>
+            <artifactId>j2html-bootstrap</artifactId>
             <version>0.0.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>htmx-j2html-extension</artifactId>
+            <artifactId>j2html-htmx</artifactId>
             <version>0.0.4-SNAPSHOT</version>
         </dependency>
     </dependencies>

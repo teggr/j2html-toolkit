@@ -10,25 +10,25 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-extensions-bom</artifactId>
-    <name>j2html-extensions-bom</name>
+    <artifactId>j2html-toolkit-bom</artifactId>
+    <name>j2html-toolkit-bom</name>
     <packaging>pom</packaging>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-extensions-core</artifactId>
+                <artifactId>j2html-extensions</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>bootstrap-j2html-extension</artifactId>
+                <artifactId>j2html-bootstrap</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>htmx-j2html-extension</artifactId>
+                <artifactId>j2html-htmx</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

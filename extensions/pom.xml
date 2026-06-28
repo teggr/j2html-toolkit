@@ -9,8 +9,8 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-extensions-core</artifactId>
-    <name>j2html-extensions-core</name>
+    <artifactId>j2html-extensions</artifactId>
+    <name>j2html-extensions</name>
 
     <dependencies>
         <dependency>

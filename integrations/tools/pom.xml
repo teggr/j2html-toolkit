@@ -6,18 +6,18 @@
 
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>j2html-toolkit</artifactId>
+        <artifactId>j2html-integrations</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-extensions-tools</artifactId>
-    <name>j2html-extensions-tools</name>
+    <artifactId>j2html-integration-tools</artifactId>
+    <name>j2html-integration-tools</name>
 
     <dependencies>
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions-core</artifactId>
+            <artifactId>j2html-extensions</artifactId>
             <version>${project.version}</version>
         </dependency>
 

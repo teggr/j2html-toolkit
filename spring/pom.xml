@@ -9,9 +9,9 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring</artifactId>
+    <artifactId>j2html-spring</artifactId>
     <packaging>pom</packaging>
-    <name>spring</name>
+    <name>j2html-spring</name>
 
     <modules>
         <module>j2html-example-webapp</module>

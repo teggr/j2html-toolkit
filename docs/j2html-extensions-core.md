@@ -1,4 +1,4 @@
-# j2html-extensions-core
+# j2html-extensions
 
 Support for some missing tags: `PathTag`, `SvgTag`, `SymbolTag`, `UseTag`. The `ExtendedTagCreator` makes those available in the same way as the j2html library.
 

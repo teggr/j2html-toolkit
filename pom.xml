@@ -26,14 +26,13 @@
     </properties>
 
     <modules>
-        <module>j2html-java-html-preview</module>
-        <module>j2html-extensions-core</module>
-        <module>j2html-extensions-tools</module>
+        <module>java-html-preview</module>
+        <module>extensions</module>
+        <module>template-engine</module>
         <module>rebel-ui-test</module>
         <module>integrations</module>
         <module>spring</module>
-        <module>j2html-template-engine</module>
-        <module>j2html-extensions-bom</module>
+        <module>bom</module>
     </modules>
 
     <dependencyManagement>

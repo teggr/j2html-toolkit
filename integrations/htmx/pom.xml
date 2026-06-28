@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>integrations</artifactId>
+        <artifactId>j2html-integrations</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>htmx-j2html-extension</artifactId>
-    <name>htmx-j2html-extension</name>
+    <artifactId>j2html-htmx</artifactId>
+    <name>j2html-htmx</name>
 
     <properties>
         <htmx.version>2.0.0</htmx.version>
@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions-core</artifactId>
+            <artifactId>j2html-extensions</artifactId>
             <version>${project.version}</version>
         </dependency>
 
