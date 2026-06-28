@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>j2html-extensions</artifactId>
+        <artifactId>j2html-toolkit</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 

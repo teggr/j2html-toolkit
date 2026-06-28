@@ -1,8 +1,8 @@
-# j2html-extensions
+# j2html-toolkit
 
 A collection of extensions for the [j2html](https://j2html.com) library, used for building HTML with java code.
 
-![Maven Central Version](https://img.shields.io/maven-central/v/dev.rebelcraft/j2html-extensions)
+![Maven Central Version](https://img.shields.io/maven-central/v/dev.rebelcraft/j2html-toolkit)
 
 # What's in the box?
 
@@ -106,13 +106,13 @@ A JBang setup script is available at `/jbang/j2htmlInit.java`.
 Interactive mode (asks for confirmation and updates `./pom.xml`):
 
 ```bash
-jbang /path/to/j2html-extensions/jbang/j2htmlInit.java
+jbang /path/to/j2html-toolkit/jbang/j2htmlInit.java
 ```
 
 Non-interactive mode:
 
 ```bash
-jbang /path/to/j2html-extensions/jbang/j2htmlInit.java --pom /path/to/project/pom.xml --yes
+jbang /path/to/j2html-toolkit/jbang/j2htmlInit.java --pom /path/to/project/pom.xml --yes
 ```
 
 Use `--help` to see all CLI options.

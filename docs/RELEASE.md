@@ -27,7 +27,7 @@ mvn -Pcentral --projects spring/j2html-example-webapp versions:commit
 # commit and push the github repo
 
 # create github release
-https://github.com/teggr/j2html-extensions/releases
+https://github.com/teggr/j2html-toolkit/releases
 ```
 
 For manual publishing: https://central.sonatype.com/publishing/deployments (GH)

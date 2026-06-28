@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>j2html-extensions</artifactId>
+    <artifactId>j2html-toolkit</artifactId>
     <version>0.0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 
-    <name>j2html-extensions</name>
-    <description>j2html-extensions</description>
+    <name>j2html-toolkit</name>
+    <description>j2html-toolkit</description>
     <url>https://www.rebelcraft.dev</url>
 
     <properties>
@@ -197,9 +197,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/teggr/j2html-extensions</connection>
-        <developerConnection>scm:git:ssh://github.com:teggr/j2html-extensions.git</developerConnection>
-        <url>http://github.com/teggr/j2html-extensions/tree/main</url>
+        <connection>scm:git:git://github.com/teggr/j2html-toolkit</connection>
+        <developerConnection>scm:git:ssh://github.com:teggr/j2html-toolkit.git</developerConnection>
+        <url>http://github.com/teggr/j2html-toolkit/tree/main</url>
     </scm>
 
 </project>

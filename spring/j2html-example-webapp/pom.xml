@@ -202,9 +202,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/teggr/j2html-extensions</connection>
-        <developerConnection>scm:git:ssh://github.com:teggr/j2html-extensions.git</developerConnection>
-        <url>http://github.com/teggr/j2html-extensions/tree/main</url>
+        <connection>scm:git:git://github.com/teggr/j2html-toolkit</connection>
+        <developerConnection>scm:git:ssh://github.com:teggr/j2html-toolkit.git</developerConnection>
+        <url>http://github.com/teggr/j2html-toolkit/tree/main</url>
     </scm>
 
 </project>

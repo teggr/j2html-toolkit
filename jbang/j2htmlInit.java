@@ -65,7 +65,7 @@ public class j2htmlInit {
         }
 
         if (version == null || version.isBlank()) {
-            System.err.println("Unable to determine j2html-extensions BOM version.");
+            System.err.println("Unable to determine j2html-toolkit BOM version.");
             System.exit(1);
         }
 
