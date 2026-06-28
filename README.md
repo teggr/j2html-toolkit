@@ -12,7 +12,6 @@ A collection of extensions for the [j2html](https://j2html.com) library, used fo
 * [bootstrap-j2html-extension](/docs/bootstrap-j2html-extension.md) - Bootstrap lib
 * [htmx-j2html-extension](/docs/htmx-j2html-extension.md) - HTMX attributes
 * [j2html-template-engine](/docs/j2html-template-engine.md) - Template engine and Spring integrations for j2html
-* [j2html-generator](/docs/j2html-generator.md) - Webapp for generating j2html code from html
 
 # Quick Start
 
