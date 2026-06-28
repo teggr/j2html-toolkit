@@ -1,5 +1,7 @@
 # bootstrap-j2html-extension
 
+This module now lives under `integrations/bootstrap` in the Maven reactor.
+
 This brings the [Bootstrap](https://getbootstrap.com/) UI kit into the j2html ecosystem.
 
 * `Bootstrap` for CSS classes declared in the UI toolkit

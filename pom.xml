@@ -30,8 +30,7 @@
         <module>j2html-extensions-core</module>
         <module>j2html-extensions-tools</module>
         <module>rebel-ui-test</module>
-        <module>bootstrap-j2html-extension</module>
-        <module>htmx-j2html-extension</module>
+        <module>integrations</module>
         <module>j2html-template-engine</module>
         <module>j2html-extensions-spring-boot-starter</module>
         <module>j2html-extensions-bom</module>

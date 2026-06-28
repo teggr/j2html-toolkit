@@ -9,9 +9,11 @@ A collection of extensions for the [j2html](https://j2html.com) library, used fo
 * [j2html-extensions-core](/docs/j2html-extensions-core.md) - Extensions for the core j2html classes and creators
 * [j2html-extensions-tools](/docs/j2html-extensions-tools.md) - Standalone module with utilities for generating code
 * [rebel-ui-test](/docs/rebel-ui-test.md) - Standalone module for testing UI rendering
-* [bootstrap-j2html-extension](/docs/bootstrap-j2html-extension.md) - Bootstrap lib
-* [htmx-j2html-extension](/docs/htmx-j2html-extension.md) - HTMX attributes
+* [integrations/bootstrap](/docs/bootstrap-j2html-extension.md) - Bootstrap lib
+* [integrations/htmx](/docs/htmx-j2html-extension.md) - HTMX attributes
 * [j2html-template-engine](/docs/j2html-template-engine.md) - Template engine and Spring integrations for j2html
+
+The browser-focused integration modules now live under `integrations/` in the Maven reactor.
 
 # Quick Start
 

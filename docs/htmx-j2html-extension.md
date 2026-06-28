@@ -1,5 +1,7 @@
 # htmx-j2html-extension
 
+This module now lives under `integrations/htmx` in the Maven reactor.
+
 This brings the [HTMX](https://htmx.org/) tools for HTML into the j2html ecosystem.
 
 * `HtmxAttributes` for attributes
