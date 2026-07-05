@@ -23,7 +23,7 @@ class SwappingHtmxConfigurerTest {
     @Test
     void swapOptions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                         .with(
                                 text("Like")

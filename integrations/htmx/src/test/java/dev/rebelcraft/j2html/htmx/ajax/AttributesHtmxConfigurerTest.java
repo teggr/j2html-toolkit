@@ -22,7 +22,7 @@ class AttributesHtmxConfigurerTest {
     @Test
     void hxGetTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                                 .with(
                                         text("Get Some HTML")
@@ -48,7 +48,7 @@ class AttributesHtmxConfigurerTest {
     @Test
     void hxPostTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                                 .with(
                                         text("Enable Your Account")
@@ -74,7 +74,7 @@ class AttributesHtmxConfigurerTest {
     @Test
     void hxPutTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                                 .with(
                                         text("Put Money In Your Account")
@@ -100,7 +100,7 @@ class AttributesHtmxConfigurerTest {
     @Test
     void hxPatchTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                                 .with(
                                         text("Patch Your Account")
@@ -126,7 +126,7 @@ class AttributesHtmxConfigurerTest {
     @Test
     void hxDeleteTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                                 .with(
                                         text("Delete Your Account")

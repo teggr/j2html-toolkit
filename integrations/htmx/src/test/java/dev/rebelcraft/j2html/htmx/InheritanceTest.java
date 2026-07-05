@@ -21,7 +21,7 @@ class InheritanceTest {
     @Test
     void attributeInheritance() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxConfirm("Are you sure?"))
                         .with(
@@ -60,7 +60,7 @@ class InheritanceTest {
     @Test
     void attributeInheritance2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxConfirm("Are you sure?"))
                         .with(

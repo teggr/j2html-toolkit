@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,7 +24,7 @@ class SpacingTest {
     @Test
     void horizontalCentering() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.mx_auto, Bootstrap.p_2)
                         .withStyle("width: 200px;")
@@ -49,7 +50,7 @@ class SpacingTest {
     @Test
     void gap() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(AriaRoles.grid, Bootstrap.gap_3)
                         .with(
@@ -104,7 +105,7 @@ class SpacingTest {
     @Test
     void rowGap() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(AriaRoles.grid, Bootstrap.gap_0, Bootstrap.row_gap_3)
                         .with(
@@ -159,7 +160,7 @@ class SpacingTest {
     @Test
     void columnGap() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(AriaRoles.grid, Bootstrap.gap_0, Bootstrap.column_gap_3)
                         .with(

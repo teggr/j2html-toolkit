@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.svg;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.use;
 import static j2html.TagCreator.a;
@@ -25,7 +26,7 @@ class IconLinkTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a()
                         .withClasses(Bootstrap.icon_link)
                         .withHref("#")
@@ -64,7 +65,7 @@ class IconLinkTest {
     @Test
     void example2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a()
                         .withClasses(Bootstrap.icon_link)
                         .withHref("#")
@@ -103,7 +104,7 @@ class IconLinkTest {
     @Test
     void styleOnHover() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a()
                         .withClasses(Bootstrap.icon_link, Bootstrap.icon_link_hover)
                         .withHref("#")

@@ -19,7 +19,7 @@ class QuickstartTest {
     @Test
     void shouldOutputTheQuickstart() throws Exception {
 
-        String quickStartIndex = uiDocumentation.render(Quickstart::index);
+        String quickStartIndex = Quickstart.index();
 
         //language=HTML
         assertEquals("""

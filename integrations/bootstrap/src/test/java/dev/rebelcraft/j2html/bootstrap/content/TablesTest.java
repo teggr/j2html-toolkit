@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class TablesTest {
     @Test
     void tablesTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
          .withClasses(Bootstrap.table)
          .with(
@@ -105,7 +106,7 @@ class TablesTest {
     @Test
     void stripedRows() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_striped)
                         .with(
@@ -187,7 +188,7 @@ class TablesTest {
     @Test
     void stripedColumns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_striped_columns)
                         .with(
@@ -269,7 +270,7 @@ class TablesTest {
     @Test
     void stripedColumns2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_dark, Bootstrap.table_striped)
                         .with(
@@ -351,7 +352,7 @@ class TablesTest {
     @Test
     void stripedColumns3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_dark, Bootstrap.table_striped_columns)
                         .with(
@@ -433,7 +434,7 @@ class TablesTest {
     @Test
     void stripedColumns4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_success, Bootstrap.table_striped)
                         .with(
@@ -515,7 +516,7 @@ class TablesTest {
     @Test
     void stripedColumns5() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_success, Bootstrap.table_striped_columns)
                         .with(
@@ -597,7 +598,7 @@ class TablesTest {
     @Test
     void hoverableRows() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_hover)
                         .with(
@@ -679,7 +680,7 @@ class TablesTest {
     @Test
     void hoverableRows2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_dark, Bootstrap.table_hover)
                         .with(
@@ -761,7 +762,7 @@ class TablesTest {
     @Test
     void hoverableRows3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_striped, Bootstrap.table_hover)
                         .with(
@@ -843,7 +844,7 @@ class TablesTest {
     @Test
     void activeTables() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table)
                         .with(
@@ -986,7 +987,7 @@ class TablesTest {
     @Test
     void activeTables2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_dark)
                         .with(
@@ -1129,7 +1130,7 @@ class TablesTest {
     @Test
     void borderedTables() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_bordered)
                         .with(
@@ -1211,7 +1212,7 @@ class TablesTest {
     @Test
     void borderedTables2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_bordered, Bootstrap.border_primary)
                         .with(
@@ -1293,7 +1294,7 @@ class TablesTest {
     @Test
     void tablesWithoutBorders() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_borderless)
                         .with(
@@ -1375,7 +1376,7 @@ class TablesTest {
     @Test
     void tablesWithoutBorders2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_dark, Bootstrap.table_borderless)
                         .with(
@@ -1457,7 +1458,7 @@ class TablesTest {
     @Test
     void smallTables() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_sm)
                         .with(
@@ -1539,7 +1540,7 @@ class TablesTest {
     @Test
     void smallTables2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_dark, Bootstrap.table_sm)
                         .with(
@@ -1621,7 +1622,7 @@ class TablesTest {
     @Test
     void tableGroupDividers() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table)
                         .with(
@@ -1763,7 +1764,7 @@ class TablesTest {
     @Test
     void verticalAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.align_middle)
                         .with(
@@ -2010,7 +2011,7 @@ class TablesTest {
     @Test
     void nesting() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.table_striped, Bootstrap.table_bordered)
                         .with(
@@ -2285,7 +2286,7 @@ class TablesTest {
     @Test
     void tableHead() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table)
                         .with(
@@ -2393,7 +2394,7 @@ class TablesTest {
     @Test
     void tableHead2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table)
                         .with(
@@ -2501,7 +2502,7 @@ class TablesTest {
     @Test
     void captions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table)
                         .with(
@@ -2590,7 +2591,7 @@ class TablesTest {
     @Test
     void captions2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .withClasses(Bootstrap.table, Bootstrap.caption_top)
                         .with(
@@ -2679,7 +2680,7 @@ class TablesTest {
     @Test
     void alwaysResponsive() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.table_responsive)
                         .with(

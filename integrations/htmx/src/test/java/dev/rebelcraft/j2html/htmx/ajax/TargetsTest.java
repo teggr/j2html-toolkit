@@ -21,7 +21,7 @@ class TargetsTest {
     @Test
     void targets() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 each(
                         input()
                                 .withType("text")

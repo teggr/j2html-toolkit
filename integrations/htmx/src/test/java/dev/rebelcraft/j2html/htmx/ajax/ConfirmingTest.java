@@ -21,7 +21,7 @@ class ConfirmingTest {
     @Test
     void confirmingRequests() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxDelete("/account"))
                         .attr(hxConfirm("Are you sure you wish to delete your account?"))

@@ -20,15 +20,17 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>rebel-ui-test</artifactId>
+            <artifactId>j2html-extensions</artifactId>
             <version>${project.version}</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions</artifactId>
-            <version>${project.version}</version>
+            <artifactId>java-html-tooling-html-test-docs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.rebelcraft</groupId>
+            <artifactId>java-html-tooling-html-preview</artifactId>
         </dependency>
 
     </dependencies>

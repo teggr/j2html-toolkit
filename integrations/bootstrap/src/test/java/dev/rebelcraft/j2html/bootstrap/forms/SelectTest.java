@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class SelectTest {
     @Test
     void selectTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 select()
                         .withClasses(Bootstrap.form_select)
                         .attr(AriaStatesAndProperties.ariaLabel("Default select example"))
@@ -78,7 +79,7 @@ class SelectTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         select()
                                 .withClasses(Bootstrap.form_select, Bootstrap.form_select_lg, Bootstrap.mb_3)
@@ -175,7 +176,7 @@ class SelectTest {
     @Test
     void sizing2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 select()
                         .withClasses(Bootstrap.form_select)
                         .withCondMultiple(true)
@@ -232,7 +233,7 @@ class SelectTest {
     @Test
     void sizing3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 select()
                         .withClasses(Bootstrap.form_select)
                         .withSize("3")
@@ -289,7 +290,7 @@ class SelectTest {
     @Test
     void sizing4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 select()
                         .withClasses(Bootstrap.form_select)
                         .attr(AriaStatesAndProperties.ariaLabel("Disabled select example"))

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class BordersTest {
     @Test
     void additive() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.border),
@@ -60,7 +61,7 @@ class BordersTest {
     @Test
     void subtractive() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.border, Bootstrap.border_0),
@@ -98,7 +99,7 @@ class BordersTest {
     @Test
     void color() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.border, Bootstrap.border_primary),
@@ -189,7 +190,7 @@ class BordersTest {
     @Test
     void modify() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.mb_4)
@@ -245,7 +246,7 @@ class BordersTest {
     @Test
     void opacityExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.border, Bootstrap.border_success, Bootstrap.p_2, Bootstrap.mb_2)
@@ -281,7 +282,7 @@ class BordersTest {
     @Test
     void opacityExample2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.border, Bootstrap.border_success, Bootstrap.p_2, Bootstrap.mb_2)
@@ -340,7 +341,7 @@ class BordersTest {
     @Test
     void width() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.border, Bootstrap.border_1),
@@ -379,7 +380,7 @@ class BordersTest {
     @Test
     void radius() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         img()
                                 .withSrc("...")
@@ -433,7 +434,7 @@ class BordersTest {
     @Test
     void sizes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         img()
                                 .withSrc("...")
@@ -482,7 +483,7 @@ class BordersTest {
     @Test
     void sizes2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         img()
                                 .withSrc("...")

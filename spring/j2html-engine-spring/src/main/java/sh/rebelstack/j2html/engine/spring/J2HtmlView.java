@@ -41,6 +41,7 @@ final class J2HtmlView extends AbstractView {
 
         response.setContentType(getContentType());
         response.setCharacterEncoding(characterEncoding);
+        setResponseContentType(request, response);
         String html = engine.process(templateName, RenderContext.of(model).childContext().locale(locale).build());
         if (LOG.isDebugEnabled()) {
             LOG.debug("Rendered template '{}' as {} chars (contentType={}, encoding={})",

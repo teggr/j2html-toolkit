@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class CarouselTest {
     @Test
     void basicExamples() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                      .withId("carouselExample")
                      .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -129,7 +130,7 @@ class CarouselTest {
     @Test
     void indicators() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleIndicators")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -277,7 +278,7 @@ class CarouselTest {
     @Test
     void captions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleCaptions")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -485,7 +486,7 @@ class CarouselTest {
     @Test
     void crossFade() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleFade")
                         .withClasses(Bootstrap.carousel,Carousel.slide, Bootstrap.carousel_fade)
@@ -597,7 +598,7 @@ class CarouselTest {
     @Test
     void autoplayingCarousels() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleAutoplaying")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -709,7 +710,7 @@ class CarouselTest {
     @Test
     void autoplayingCarousels2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleRide")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -821,7 +822,7 @@ class CarouselTest {
     @Test
     void individualCarouselItemInterval() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleInterval")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -935,7 +936,7 @@ class CarouselTest {
     @Test
     void autoplayingCarouselsWithoutControls() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleSlidesOnly")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -999,7 +1000,7 @@ class CarouselTest {
     @Test
     void disableTouchSwiping() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleControlsNoTouching")
                         .withClasses(Bootstrap.carousel,Carousel.slide)
@@ -1111,7 +1112,7 @@ class CarouselTest {
     @Test
     void darkVariant() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withId("carouselExampleDark")
                         .withClasses(Bootstrap.carousel, Bootstrap.carousel_dark,Carousel.slide)

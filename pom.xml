@@ -29,7 +29,6 @@
         <module>java-html-preview</module>
         <module>extensions</module>
         <module>template-engine</module>
-        <module>rebel-ui-test</module>
         <module>integrations</module>
         <module>spring</module>
         <module>bom</module>
@@ -57,6 +56,20 @@
                 <groupId>com.j2html</groupId>
                 <artifactId>j2html</artifactId>
                 <version>${j2html.version}</version>
+            </dependency>
+
+            <!-- java html tooling -->
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>java-html-tooling-html-test-docs</artifactId>
+                <version>1.0.0</version>
+                <scope>test</scope>
+            </dependency>
+             <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>java-html-tooling-html-preview</artifactId>
+                <version>1.0.0</version>
+                <scope>test</scope>
             </dependency>
 
         </dependencies>

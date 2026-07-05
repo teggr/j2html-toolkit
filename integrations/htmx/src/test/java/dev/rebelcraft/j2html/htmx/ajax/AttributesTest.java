@@ -22,7 +22,7 @@ class AttributesTest {
     @Test
     void hxGetTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxGet("/example"))
                         .with(
@@ -47,7 +47,7 @@ class AttributesTest {
     @Test
     void hxPostTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxPost("/account/enable"))
                         .attr(hxTarget("body"))
@@ -73,7 +73,7 @@ class AttributesTest {
     @Test
     void hxPutTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxPut("/account"))
                         .attr(hxTarget("body"))
@@ -99,7 +99,7 @@ class AttributesTest {
     @Test
     void hxPatchTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxPatch("/account"))
                         .attr("hx-target", "body")
@@ -125,7 +125,7 @@ class AttributesTest {
     @Test
     void hxDeleteTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxDelete("/account"))
                         .attr(hxTarget("body"))

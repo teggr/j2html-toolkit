@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class ColorsTest {
     @Test
     void colors() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.text_primary)
@@ -232,7 +233,7 @@ class ColorsTest {
     @Test
     void opacityExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.text_primary)
@@ -268,7 +269,7 @@ class ColorsTest {
     @Test
     void opacityExample2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.text_primary)

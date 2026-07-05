@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.button;
 import static j2html.TagCreator.div;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,7 +24,7 @@ class CloseButtonTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                  .withType("button")
                  .withClasses(Bootstrap.btn_close)
@@ -48,7 +49,7 @@ class CloseButtonTest {
     @Test
     void disabledState() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                         .withType("button")
                         .withClasses(Bootstrap.btn_close)
@@ -74,7 +75,7 @@ class CloseButtonTest {
     @Test
     void darkVariant() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withData("bs-theme","dark")
                         .with(

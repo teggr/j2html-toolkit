@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class OverflowTest {
     @Test
     void examples() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.overflow_auto)
@@ -72,7 +73,7 @@ class OverflowTest {
     @Test
     void overflowX() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.overflow_x_auto)
@@ -123,7 +124,7 @@ class OverflowTest {
     @Test
     void overflowY() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.overflow_y_auto)

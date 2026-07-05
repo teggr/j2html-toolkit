@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class FloatingLabelsTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                   div()
                    .withClasses(Bootstrap.form_floating, Bootstrap.mb_3)
@@ -81,7 +82,7 @@ class FloatingLabelsTest {
     @Test
     void example2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.form_floating)
                         .with(
@@ -119,7 +120,7 @@ class FloatingLabelsTest {
     @Test
     void example3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.form_floating)
                         .with(
@@ -157,7 +158,7 @@ class FloatingLabelsTest {
     @Test
     void textAreas() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.form_floating)
                         .with(
@@ -193,7 +194,7 @@ class FloatingLabelsTest {
     @Test
     void textAreas2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.form_floating)
                         .with(
@@ -230,7 +231,7 @@ class FloatingLabelsTest {
     @Test
     void selects() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.form_floating)
                         .with(
@@ -303,7 +304,7 @@ class FloatingLabelsTest {
     @Test
     void disabled() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_floating, Bootstrap.mb_3)
@@ -444,7 +445,7 @@ class FloatingLabelsTest {
     @Test
     void readOnlyPlainText() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_floating, Bootstrap.mb_3)
@@ -506,7 +507,7 @@ class FloatingLabelsTest {
     @Test
     void inputGroups() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
                         .with(
@@ -557,7 +558,7 @@ class FloatingLabelsTest {
     @Test
     void inputGroups2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.input_group, Bootstrap.has_validation)
                         .with(
@@ -617,7 +618,7 @@ class FloatingLabelsTest {
     @Test
     void layout() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.g_2)
                         .with(

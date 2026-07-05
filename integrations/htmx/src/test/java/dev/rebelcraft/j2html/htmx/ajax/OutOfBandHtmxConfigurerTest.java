@@ -22,7 +22,7 @@ class OutOfBandHtmxConfigurerTest {
     @Test
     void outOfBandSwaps() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 each(
                         hx(div()
                                 .withId("message")

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class ColorAndBackgroundTest {
     @Test
     void overview() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
               div()
                .withClasses(Bootstrap.text_bg_primary, Bootstrap.p_3)
@@ -104,7 +105,7 @@ class ColorAndBackgroundTest {
     @Test
     void withComponents() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.badge, Bootstrap.text_bg_primary)
@@ -139,7 +140,7 @@ class ColorAndBackgroundTest {
     @Test
     void withComponents2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.card, Bootstrap.text_bg_primary, Bootstrap.mb_3)

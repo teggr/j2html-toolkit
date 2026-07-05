@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +23,7 @@ class VerticalRuleTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                     .withClasses(Bootstrap.vr)
         );
@@ -43,7 +44,7 @@ class VerticalRuleTest {
     @Test
     void example2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex)
                         .withStyle("height: 200px;")
@@ -71,7 +72,7 @@ class VerticalRuleTest {
     @Test
     void withStacks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.hstack, Bootstrap.gap_3)
                         .with(

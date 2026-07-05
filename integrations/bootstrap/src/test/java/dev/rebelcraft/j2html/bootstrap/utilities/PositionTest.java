@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.path;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.svg;
 import static j2html.TagCreator.*;
@@ -25,7 +26,7 @@ class PositionTest {
     @Test
     void positionValues() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.position_static)
@@ -84,7 +85,7 @@ class PositionTest {
     @Test
     void arrangeElements() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.position_relative)
                         .with(
@@ -131,7 +132,7 @@ class PositionTest {
     @Test
     void centerElements() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.position_relative)
                         .with(
@@ -190,7 +191,7 @@ class PositionTest {
     @Test
     void centerElements2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.position_relative)
                         .with(
@@ -249,7 +250,7 @@ class PositionTest {
     @Test
     void examples() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -339,7 +340,7 @@ class PositionTest {
     @Test
     void examples2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.position_relative, Bootstrap.m_4)
                         .with(

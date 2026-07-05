@@ -22,7 +22,7 @@ class SynchronisationHtmxConfigurerTest {
     @Test
     void synchronization() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(form()
                                 .with(
                                         hx(input()

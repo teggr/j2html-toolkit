@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.a;
 import static j2html.TagCreator.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +23,7 @@ class FocusRingTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a()
                  .withHref("#")
                  .withClasses(Bootstrap.d_inline_flex, Bootstrap.focus_ring, Bootstrap.py_1, Bootstrap.px_2, Bootstrap.text_decoration_none, Bootstrap.border, Bootstrap.rounded_2)

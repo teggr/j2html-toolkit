@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class ImagesTest {
     @Test
     void responsiveImages() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 img()
                         .withSrc("...")
                         .withClasses(Bootstrap.img_fluid)
@@ -43,7 +44,7 @@ class ImagesTest {
     @Test
     void imageThumbnails() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 img()
                         .withSrc("...")
                         .withClasses(Bootstrap.img_thumbnail)
@@ -65,7 +66,7 @@ class ImagesTest {
     @Test
     void aligningImages() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         img()
                                 .withSrc("...")
@@ -94,7 +95,7 @@ class ImagesTest {
     @Test
     void aligningImages2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 img()
                         .withSrc("...")
                         .withClasses(Bootstrap.rounded, Bootstrap.mx_auto, Bootstrap.d_block)
@@ -116,7 +117,7 @@ class ImagesTest {
     @Test
     void aligningImages3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.text_center)
                         .with(
@@ -144,7 +145,7 @@ class ImagesTest {
     @Test
     void pictureTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 picture()
                         .with(
                                 source()

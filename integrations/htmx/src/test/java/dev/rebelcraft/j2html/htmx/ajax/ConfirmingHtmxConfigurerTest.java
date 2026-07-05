@@ -24,7 +24,7 @@ class ConfirmingHtmxConfigurerTest {
     @Test
     void confirmingRequests() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button()
                         .with(
                                 text("Delete My Account")

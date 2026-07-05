@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class PositionTest {
     @Test
     void fixedTop() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
              .withClasses(Bootstrap.fixed_top)
              .with(
@@ -46,7 +47,7 @@ class PositionTest {
     @Test
     void fixedBottom() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.fixed_bottom)
                         .with(
@@ -71,7 +72,7 @@ class PositionTest {
     @Test
     void stickyTop() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.sticky_top)
                         .with(
@@ -96,7 +97,7 @@ class PositionTest {
     @Test
     void responsiveStickyTop() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses("sticky-sm-top")
@@ -155,7 +156,7 @@ class PositionTest {
     @Test
     void stickyBottom() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.sticky_bottom)
                         .with(
@@ -180,7 +181,7 @@ class PositionTest {
     @Test
     void responsiveStickyBottom() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses("sticky-sm-bottom")

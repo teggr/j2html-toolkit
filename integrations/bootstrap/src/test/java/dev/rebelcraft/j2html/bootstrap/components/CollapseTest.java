@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,7 +25,7 @@ class CollapseTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
               p()
                .withClasses(Bootstrap.d_inline_flex, Bootstrap.gap_1)
@@ -98,7 +99,7 @@ class CollapseTest {
     @Test
     void horizontal() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -161,7 +162,7 @@ class CollapseTest {
     @Test
     void multipleTogglesAndTargets() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.d_inline_flex, Bootstrap.gap_1)

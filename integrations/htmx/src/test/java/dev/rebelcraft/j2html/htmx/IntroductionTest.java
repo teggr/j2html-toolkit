@@ -22,7 +22,7 @@ class IntroductionTest {
     @Test
     void nutshell() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxPost("/clicked"))
                         .attr(hxTrigger(click))
@@ -50,7 +50,7 @@ class IntroductionTest {
     @Test
     void nutshell2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 a()
                         .withData(hx_post, "/click")
                         .with(
@@ -75,7 +75,7 @@ class IntroductionTest {
     @Test
     void nutshellWrap2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button().with(text("Click Me!")), (hx) ->
                         hx.post("/clicked")
                             .trigger(click)
@@ -101,7 +101,7 @@ class IntroductionTest {
     @Test
     void nutshellWrap4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button(), (hx) ->
                         hx.post("/clicked")
                                 .trigger(click)

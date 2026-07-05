@@ -21,7 +21,7 @@ class BoostingTest {
     @Test
     void boostingTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxBoost("true"))
                         .with(
@@ -52,7 +52,7 @@ class BoostingTest {
     @Test
     void progressiveEnhancement() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 form()
                         .withAction("/search")
                         .withMethod("POST")

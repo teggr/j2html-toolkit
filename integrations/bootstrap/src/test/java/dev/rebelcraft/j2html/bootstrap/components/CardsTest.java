@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class CardsTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                      .withClasses(Bootstrap.card)
                      .withStyle("width: 18rem;")
@@ -82,7 +83,7 @@ class CardsTest {
     @Test
     void body() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .with(
@@ -113,7 +114,7 @@ class CardsTest {
     @Test
     void titlesTextAndLinks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -185,7 +186,7 @@ class CardsTest {
     @Test
     void images() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -228,7 +229,7 @@ class CardsTest {
     @Test
     void listGroup() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -282,7 +283,7 @@ class CardsTest {
     @Test
     void listGroup2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -344,7 +345,7 @@ class CardsTest {
     @Test
     void listGroup3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -406,7 +407,7 @@ class CardsTest {
     @Test
     void kitchenSink() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -511,7 +512,7 @@ class CardsTest {
     @Test
     void headerAndFooter() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .with(
@@ -573,7 +574,7 @@ class CardsTest {
     @Test
     void headerAndFooter2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .with(
@@ -635,7 +636,7 @@ class CardsTest {
     @Test
     void headerAndFooter3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .with(
@@ -701,7 +702,7 @@ class CardsTest {
     @Test
     void headerAndFooter4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card, Bootstrap.text_center)
                         .with(
@@ -771,7 +772,7 @@ class CardsTest {
     @Test
     void usingGridMarkup() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row)
                         .with(
@@ -880,7 +881,7 @@ class CardsTest {
     @Test
     void usingUtilities() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.card, Bootstrap.w_75, Bootstrap.mb_3)
@@ -973,7 +974,7 @@ class CardsTest {
     @Test
     void usingCustomCSS() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")
@@ -1028,7 +1029,7 @@ class CardsTest {
     @Test
     void textAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.card, Bootstrap.mb_3)
@@ -1162,7 +1163,7 @@ class CardsTest {
     @Test
     void navigation() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card, Bootstrap.text_center)
                         .with(
@@ -1278,7 +1279,7 @@ class CardsTest {
     @Test
     void navigation2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card, Bootstrap.text_center)
                         .with(
@@ -1391,7 +1392,7 @@ class CardsTest {
     @Test
     void imageCaps() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.card, Bootstrap.mb_3)
@@ -1504,7 +1505,7 @@ class CardsTest {
     @Test
     void imageOverlays() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card, Bootstrap.text_bg_dark)
                         .with(
@@ -1567,7 +1568,7 @@ class CardsTest {
     @Test
     void horizontal() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card, Bootstrap.mb_3)
                         .withStyle("max-width: 540px;")
@@ -1651,7 +1652,7 @@ class CardsTest {
     @Test
     void backgroundAndColor() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.card, Bootstrap.text_bg_primary, Bootstrap.mb_3)
@@ -1966,7 +1967,7 @@ class CardsTest {
     @Test
     void border() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.card, Bootstrap.border_primary, Bootstrap.mb_3)
@@ -2281,7 +2282,7 @@ class CardsTest {
     @Test
     void mixinUtilities() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card, Bootstrap.border_success, Bootstrap.mb_3)
                         .withStyle("max-width: 18rem;")
@@ -2343,7 +2344,7 @@ class CardsTest {
     @Test
     void cardLayout() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card_group)
                         .with(
@@ -2507,7 +2508,7 @@ class CardsTest {
     @Test
     void cardLayout2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card_group)
                         .with(
@@ -2671,7 +2672,7 @@ class CardsTest {
     @Test
     void gridCards() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.row_cols_1, Bootstrap.row_cols_md_2, Bootstrap.g_4)
                         .with(
@@ -2850,7 +2851,7 @@ class CardsTest {
     @Test
     void gridCards2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.row_cols_1, Bootstrap.row_cols_md_3, Bootstrap.g_4)
                         .with(
@@ -3029,7 +3030,7 @@ class CardsTest {
     @Test
     void gridCards3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.row_cols_1, Bootstrap.row_cols_md_3, Bootstrap.g_4)
                         .with(
@@ -3208,7 +3209,7 @@ class CardsTest {
     @Test
     void gridCards4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.row_cols_1, Bootstrap.row_cols_md_3, Bootstrap.g_4)
                         .with(

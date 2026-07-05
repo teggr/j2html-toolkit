@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class RangeTest {
     @Test
     void overview() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("customRange1")
@@ -54,7 +55,7 @@ class RangeTest {
     @Test
     void disabled() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("disabledRange")
@@ -88,7 +89,7 @@ class RangeTest {
     @Test
     void minAndMax() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("customRange2")
@@ -123,7 +124,7 @@ class RangeTest {
     @Test
     void steps() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("customRange3")

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class ButtonGroupTest {
     @Test
     void basicExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                  .withClasses(Bootstrap.btn_group)
                  .attr(AriaRoles.roleGroup)
@@ -77,7 +78,7 @@ class ButtonGroupTest {
     @Test
     void basicExample2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .with(
@@ -130,7 +131,7 @@ class ButtonGroupTest {
     @Test
     void mixedStyles() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .attr(AriaRoles.roleGroup)
@@ -185,7 +186,7 @@ class ButtonGroupTest {
     @Test
     void outlinedStyles() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .attr(AriaRoles.roleGroup)
@@ -239,7 +240,7 @@ class ButtonGroupTest {
     @Test
     void checkboxAndRadioButtonGroups() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .attr(AriaRoles.roleGroup)
@@ -311,7 +312,7 @@ class ButtonGroupTest {
     @Test
     void checkboxAndRadioButtonGroups2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .attr(AriaRoles.roleGroup)
@@ -388,7 +389,7 @@ class ButtonGroupTest {
     @Test
     void buttonToolbar() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_toolbar)
                         .attr(AriaRoles.roleToolbar)
@@ -517,7 +518,7 @@ class ButtonGroupTest {
     @Test
     void buttonToolbar2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_toolbar, Bootstrap.mb_3)
@@ -700,7 +701,7 @@ class ButtonGroupTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group, Bootstrap.btn_group_lg)
@@ -834,7 +835,7 @@ class ButtonGroupTest {
     @Test
     void nesting() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .attr(AriaRoles.roleGroup)
@@ -933,7 +934,7 @@ class ButtonGroupTest {
     @Test
     void verticalVariation() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group_vertical)
                         .attr(AriaRoles.roleGroup)
@@ -996,7 +997,7 @@ class ButtonGroupTest {
     @Test
     void verticalVariation2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group_vertical)
                         .attr(AriaRoles.roleGroup)
@@ -1257,7 +1258,7 @@ class ButtonGroupTest {
     @Test
     void verticalVariation3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group_vertical)
                         .attr(AriaRoles.roleGroup)

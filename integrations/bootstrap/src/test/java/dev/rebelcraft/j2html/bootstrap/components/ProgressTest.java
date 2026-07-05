@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class ProgressTest {
     @Test
     void howItWorks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.progress)
@@ -162,7 +163,7 @@ class ProgressTest {
     @Test
     void width() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.progress)
                         .attr(AriaRoles.roleProgressbar)
@@ -202,7 +203,7 @@ class ProgressTest {
     @Test
     void height() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.progress)
@@ -271,7 +272,7 @@ class ProgressTest {
     @Test
     void labels() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.progress)
                         .attr(AriaRoles.roleProgressbar)
@@ -316,7 +317,7 @@ class ProgressTest {
     @Test
     void labels2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.progress)
                         .attr(AriaRoles.roleProgressbar)
@@ -361,7 +362,7 @@ class ProgressTest {
     @Test
     void backgrounds() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.progress)
@@ -476,7 +477,7 @@ class ProgressTest {
     @Test
     void backgrounds2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.progress)
@@ -607,7 +608,7 @@ class ProgressTest {
     @Test
     void backgrounds3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.progress)
                         .attr(AriaRoles.roleProgressbar)
@@ -652,7 +653,7 @@ class ProgressTest {
     @Test
     void multipleBars() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.progress_stacked)
                         .with(
@@ -747,7 +748,7 @@ class ProgressTest {
     @Test
     void striped() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.progress)
@@ -886,7 +887,7 @@ class ProgressTest {
     @Test
     void animatedStripes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.progress)
                         .attr(AriaRoles.roleProgressbar)

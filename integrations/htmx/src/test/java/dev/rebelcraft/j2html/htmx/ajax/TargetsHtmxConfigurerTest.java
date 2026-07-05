@@ -22,7 +22,7 @@ class TargetsHtmxConfigurerTest {
     @Test
     void targets() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 each(
                         hx(input()
                                 .withType("text")

@@ -21,7 +21,7 @@ class IndicatorsTest {
     @Test
     void requestIndicators() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxGet("/click"))
                         .with(
@@ -50,7 +50,7 @@ class IndicatorsTest {
     @Test
     void requestIndicators2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .with(
                                 button()

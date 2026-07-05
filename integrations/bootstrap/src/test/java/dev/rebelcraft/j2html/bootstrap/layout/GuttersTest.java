@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.div;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class GuttersTest {
     @Test
     void horizontalGutters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.px_4, Bootstrap.text_center)
                         .with(
@@ -72,7 +73,7 @@ class GuttersTest {
     @Test
     void horizontalGutters2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.overflow_hidden, Bootstrap.text_center)
                         .with(
@@ -123,7 +124,7 @@ class GuttersTest {
     @Test
     void verticalGutters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.overflow_hidden, Bootstrap.text_center)
                         .with(
@@ -196,7 +197,7 @@ class GuttersTest {
     @Test
     void horizontalAndVerticalGutters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -269,7 +270,7 @@ class GuttersTest {
     @Test
     void rowColumnsGutters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -408,7 +409,7 @@ class GuttersTest {
     @Test
     void noGutters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.g_0, Bootstrap.text_center)
                         .with(

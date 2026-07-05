@@ -21,7 +21,7 @@ class SynchronisationTest {
     @Test
     void synchronization() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 form()
                         .attr(hxPost("/store"))
                         .with(

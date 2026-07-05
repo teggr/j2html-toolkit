@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class SizingTest {
     @Test
     void relativeToParent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.w_25, Bootstrap.p_3)
@@ -80,7 +81,7 @@ class SizingTest {
     @Test
     void relativeToParent2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withStyle("height: 100px;")
                         .with(
@@ -148,7 +149,7 @@ class SizingTest {
     @Test
     void relativeToParent3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withStyle("width: 50%; height: 100px;")
                         .with(
@@ -180,7 +181,7 @@ class SizingTest {
     @Test
     void relativeToParent4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withStyle("height: 100px;")
                         .with(
@@ -212,7 +213,7 @@ class SizingTest {
     @Test
     void relativeToTheViewport() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.min_vw_100)

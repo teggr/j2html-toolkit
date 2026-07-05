@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class LayoutTest {
     @Test
     void utilities() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                       div()
                        .withClasses(Bootstrap.mb_3)
@@ -83,7 +84,7 @@ class LayoutTest {
     @Test
     void formGrid() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row)
                         .with(
@@ -134,7 +135,7 @@ class LayoutTest {
     @Test
     void gutters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.g_3)
                         .with(
@@ -185,7 +186,7 @@ class LayoutTest {
     @Test
     void gutters2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.g_3)
                         .with(
@@ -408,7 +409,7 @@ class LayoutTest {
     @Test
     void horizontalForm() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .with(
                                 div()
@@ -611,7 +612,7 @@ class LayoutTest {
     @Test
     void horizontalFormLabelSizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.row, Bootstrap.mb_3)
@@ -711,7 +712,7 @@ class LayoutTest {
     @Test
     void columnSizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.g_3)
                         .with(
@@ -776,7 +777,7 @@ class LayoutTest {
     @Test
     void autoSizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.gy_2, Bootstrap.gx_3, Bootstrap.align_items_center)
                         .with(
@@ -950,7 +951,7 @@ class LayoutTest {
     @Test
     void autoSizing2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.gx_3, Bootstrap.gy_2, Bootstrap.align_items_center)
                         .with(
@@ -1124,7 +1125,7 @@ class LayoutTest {
     @Test
     void inlineForms() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.row_cols_lg_auto, Bootstrap.g_3, Bootstrap.align_items_center)
                         .with(

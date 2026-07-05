@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class DisplayTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_inline, Bootstrap.p_2, Bootstrap.text_bg_primary)
@@ -56,7 +57,7 @@ class DisplayTest {
     @Test
     void example2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.d_block, Bootstrap.p_2, Bootstrap.text_bg_primary)
@@ -91,7 +92,7 @@ class DisplayTest {
     @Test
     void hiding() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_lg_none)
@@ -126,7 +127,7 @@ class DisplayTest {
     @Test
     void displayInPrint() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_print_none)

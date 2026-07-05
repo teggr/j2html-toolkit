@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class ChecksAndRadiosTest {
     @Test
     void checks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check)
@@ -85,7 +86,7 @@ class ChecksAndRadiosTest {
     @Test
     void indeterminate() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.form_check)
                         .with(
@@ -123,7 +124,7 @@ class ChecksAndRadiosTest {
     @Test
     void disabled() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check)
@@ -210,7 +211,7 @@ class ChecksAndRadiosTest {
     @Test
     void radios() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check)
@@ -272,7 +273,7 @@ class ChecksAndRadiosTest {
     @Test
     void disabled2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check)
@@ -336,7 +337,7 @@ class ChecksAndRadiosTest {
     @Test
     void switches() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check, Bootstrap.form_switch)
@@ -443,7 +444,7 @@ class ChecksAndRadiosTest {
     @Test
     void defaultStacked() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check)
@@ -505,7 +506,7 @@ class ChecksAndRadiosTest {
     @Test
     void defaultStacked2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check)
@@ -593,7 +594,7 @@ class ChecksAndRadiosTest {
     @Test
     void inline() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check, Bootstrap.form_check_inline)
@@ -676,7 +677,7 @@ class ChecksAndRadiosTest {
     @Test
     void inline2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check, Bootstrap.form_check_inline)
@@ -762,7 +763,7 @@ class ChecksAndRadiosTest {
     @Test
     void reverse() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.form_check, Bootstrap.form_check_reverse)
@@ -844,7 +845,7 @@ class ChecksAndRadiosTest {
     @Test
     void withoutLabels() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .with(
@@ -888,7 +889,7 @@ class ChecksAndRadiosTest {
     @Test
     void checkboxToggleButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withType("checkbox")
@@ -954,7 +955,7 @@ class ChecksAndRadiosTest {
     @Test
     void checkboxToggleButtons2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withType("checkbox")
@@ -1020,7 +1021,7 @@ class ChecksAndRadiosTest {
     @Test
     void radioToggleButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withType("radio")
@@ -1105,7 +1106,7 @@ class ChecksAndRadiosTest {
     @Test
     void radioToggleButtons2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withType("radio")
@@ -1190,7 +1191,7 @@ class ChecksAndRadiosTest {
     @Test
     void outlinedStyles() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withType("checkbox")

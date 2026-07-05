@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class PlaceholdersTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                   div()
                    .withClasses(Bootstrap.card)
@@ -146,7 +147,7 @@ class PlaceholdersTest {
     @Test
     void howItWorks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .attr(
@@ -184,7 +185,7 @@ class PlaceholdersTest {
     @Test
     void width() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.placeholder, Bootstrap.col_6),
@@ -216,7 +217,7 @@ class PlaceholdersTest {
     @Test
     void color() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.placeholder, Bootstrap.col_12),
@@ -271,7 +272,7 @@ class PlaceholdersTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.placeholder, Bootstrap.col_12, Bootstrap.placeholder_lg),
@@ -306,7 +307,7 @@ class PlaceholdersTest {
     @Test
     void animation() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.placeholder_glow)

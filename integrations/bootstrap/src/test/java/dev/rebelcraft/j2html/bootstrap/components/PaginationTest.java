@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class PaginationTest {
     @Test
     void overview() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                  .attr(
                     AriaStatesAndProperties.ariaLabel("Page navigation example")
@@ -128,7 +129,7 @@ class PaginationTest {
     @Test
     void workingWithIcons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Page navigation example")
@@ -256,7 +257,7 @@ class PaginationTest {
     @Test
     void disabledAndActiveStates() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("...")
@@ -364,7 +365,7 @@ class PaginationTest {
     @Test
     void disabledAndActiveStates2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("...")
@@ -471,7 +472,7 @@ class PaginationTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("...")
@@ -549,7 +550,7 @@ class PaginationTest {
     @Test
     void sizing2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("...")
@@ -627,7 +628,7 @@ class PaginationTest {
     @Test
     void alignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Page navigation example")
@@ -732,7 +733,7 @@ class PaginationTest {
     @Test
     void alignment2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .attr(
                                 AriaStatesAndProperties.ariaLabel("Page navigation example")

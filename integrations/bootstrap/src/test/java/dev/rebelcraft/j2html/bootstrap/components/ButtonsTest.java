@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class ButtonsTest {
     @Test
     void baseClass() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                      .withType("button")
                      .withClasses(Bootstrap.btn)
@@ -49,7 +50,7 @@ class ButtonsTest {
     @Test
     void variants() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -149,7 +150,7 @@ class ButtonsTest {
     @Test
     void buttonTags() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         a()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -202,7 +203,7 @@ class ButtonsTest {
     @Test
     void outlineButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -293,7 +294,7 @@ class ButtonsTest {
     @Test
     void sizes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -330,7 +331,7 @@ class ButtonsTest {
     @Test
     void sizes2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -367,7 +368,7 @@ class ButtonsTest {
     @Test
     void sizes3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                         .withType("button")
                         .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -394,7 +395,7 @@ class ButtonsTest {
     @Test
     void disabledState() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -453,7 +454,7 @@ class ButtonsTest {
     @Test
     void disabledState2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         a()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary, Bootstrap.disabled)
@@ -492,7 +493,7 @@ class ButtonsTest {
     @Test
     void linkCaveat() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         a()
                                 .withHref("#")
@@ -539,7 +540,7 @@ class ButtonsTest {
     @Test
     void blockButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_grid, Bootstrap.gap_2)
                         .with(
@@ -580,7 +581,7 @@ class ButtonsTest {
     @Test
     void blockButtons2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_grid, Bootstrap.gap_2, Bootstrap.d_md_block)
                         .with(
@@ -621,7 +622,7 @@ class ButtonsTest {
     @Test
     void blockButtons3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_grid, Bootstrap.gap_2, Bootstrap.col_6, Bootstrap.mx_auto)
                         .with(
@@ -662,7 +663,7 @@ class ButtonsTest {
     @Test
     void blockButtons4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_grid, Bootstrap.gap_2, Bootstrap.d_md_flex, Bootstrap.justify_content_md_end)
                         .with(
@@ -703,7 +704,7 @@ class ButtonsTest {
     @Test
     void toggleStates() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.d_inline_flex, Bootstrap.gap_1)
@@ -798,7 +799,7 @@ class ButtonsTest {
     @Test
     void toggleStates2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.d_inline_flex, Bootstrap.gap_1)

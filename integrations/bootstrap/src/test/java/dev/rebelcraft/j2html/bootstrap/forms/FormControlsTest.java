@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class FormControlsTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.mb_3)
@@ -82,7 +83,7 @@ class FormControlsTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withClasses(Bootstrap.form_control, Bootstrap.form_control_lg)
@@ -119,7 +120,7 @@ class FormControlsTest {
     @Test
     void formText() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("inputPassword5")
@@ -162,7 +163,7 @@ class FormControlsTest {
     @Test
     void formText2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.g_3, Bootstrap.align_items_center)
                         .with(
@@ -227,7 +228,7 @@ class FormControlsTest {
     @Test
     void disabled() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         input()
                                 .withClasses(Bootstrap.form_control)
@@ -261,7 +262,7 @@ class FormControlsTest {
     @Test
     void readOnly() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 input()
                         .withClasses(Bootstrap.form_control)
                         .withType("text")
@@ -285,7 +286,7 @@ class FormControlsTest {
     @Test
     void readOnlyPlainText() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.mb_3, Bootstrap.row)
@@ -358,7 +359,7 @@ class FormControlsTest {
     @Test
     void readOnlyPlainText2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.g_3)
                         .with(
@@ -439,7 +440,7 @@ class FormControlsTest {
     @Test
     void fileInput() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.mb_3)
@@ -559,7 +560,7 @@ class FormControlsTest {
     @Test
     void color() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("exampleColorInput")
@@ -594,7 +595,7 @@ class FormControlsTest {
     @Test
     void datalists() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         label()
                                 .withFor("exampleDataList")

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class LinkTest {
     @Test
     void linkOpacity() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -110,7 +111,7 @@ class LinkTest {
     @Test
     void linkOpacity2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -199,7 +200,7 @@ class LinkTest {
     @Test
     void underlineColor() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -330,7 +331,7 @@ class LinkTest {
     @Test
     void underlineOffset() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -404,7 +405,7 @@ class LinkTest {
     @Test
     void underlineOpacity() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -507,7 +508,7 @@ class LinkTest {
     @Test
     void hoverVariants() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a()
                         .withClasses(Bootstrap.link_offset_2, Bootstrap.link_offset_3_hover, Bootstrap.link_underline, Bootstrap.link_underline_opacity_0, Bootstrap.link_underline_opacity_75_hover)
                         .withHref("#")
@@ -533,7 +534,7 @@ class LinkTest {
     @Test
     void coloredLinks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(

@@ -22,7 +22,7 @@ class TriggersHtmxConfigurerTest {
     @Test
     void triggeringRequests() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div()
                                 .with(
                                         text("[Here Mouse, Mouse!]")
@@ -48,7 +48,7 @@ class TriggersHtmxConfigurerTest {
     @Test
     void triggerModifiers() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div()
                         .with(
                                 text("[Here Mouse, Mouse!]")
@@ -74,7 +74,7 @@ class TriggersHtmxConfigurerTest {
     @Test
     void triggerModifiers2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 each(
                         hx(input()
                                 .withType("text")
@@ -104,7 +104,7 @@ class TriggersHtmxConfigurerTest {
     @Test
     void triggerFilters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div()
                         .with(
                                 text("Control Click Me")
@@ -130,7 +130,7 @@ class TriggersHtmxConfigurerTest {
     @Test
     void pollingTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div(),
                         (hx) -> hx.get("/news").trigger(every("2s"))
                 )
@@ -152,7 +152,7 @@ class TriggersHtmxConfigurerTest {
     @Test
     void loadPolling() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div(),
                         (hx) -> hx.get("/messages").trigger(load(delay("1s"))).swap(outerHTML)
                 )

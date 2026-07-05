@@ -22,7 +22,7 @@ class BoostingHtmxConfigurerTest {
     @Test
     void boostingTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div()
                         .with(
                                 a()
@@ -54,7 +54,7 @@ class BoostingHtmxConfigurerTest {
     @Test
     void progressiveEnhancement() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 form()
                         .withAction("/search")
                         .withMethod("POST")

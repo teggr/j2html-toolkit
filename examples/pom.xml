@@ -9,13 +9,12 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-spring</artifactId>
+    <artifactId>j2html-toolkit-examples</artifactId>
     <packaging>pom</packaging>
-    <name>j2html-spring</name>
+    <name>j2html-toolkit-examples</name>
 
     <modules>
-        <module>j2html-engine-spring</module>
-        <module>j2html-engine-spring-boot-starter</module>
+        <module>j2html-example-webapp</module>
     </modules>
 
     <properties>

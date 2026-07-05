@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class OffcanvasTest {
     @Test
     void offcanvasComponents() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                  .withClasses(Bootstrap.offcanvas, Bootstrap.offcanvas_start, Bootstrap.show)
                  .withTabindex(-1)
@@ -83,7 +84,7 @@ class OffcanvasTest {
     @Test
     void liveDemo() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         a()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -242,7 +243,7 @@ class OffcanvasTest {
     @Test
     void bodyScrolling() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -325,7 +326,7 @@ class OffcanvasTest {
     @Test
     void bodyScrollingAndBackdrop() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -407,7 +408,7 @@ class OffcanvasTest {
     @Test
     void staticBackdrop() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -489,7 +490,7 @@ class OffcanvasTest {
     @Test
     void darkOffcanvas() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.offcanvas, Bootstrap.offcanvas_start, Bootstrap.show, Bootstrap.text_bg_dark)
                         .withTabindex(-1)
@@ -555,7 +556,7 @@ class OffcanvasTest {
     @Test
     void responsive() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary, Bootstrap.d_lg_none)
@@ -655,7 +656,7 @@ class OffcanvasTest {
     @Test
     void placement() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -731,7 +732,7 @@ class OffcanvasTest {
     @Test
     void placement2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -807,7 +808,7 @@ class OffcanvasTest {
     @Test
     void placement3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)

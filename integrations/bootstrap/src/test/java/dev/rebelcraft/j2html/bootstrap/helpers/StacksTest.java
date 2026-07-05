@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class StacksTest {
     @Test
     void vertical() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
              .withClasses(Bootstrap.vstack, Bootstrap.gap_3)
              .with(
@@ -69,7 +70,7 @@ class StacksTest {
     @Test
     void horizontal() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.hstack, Bootstrap.gap_3)
                         .with(
@@ -116,7 +117,7 @@ class StacksTest {
     @Test
     void horizontal2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.hstack, Bootstrap.gap_3)
                         .with(
@@ -163,7 +164,7 @@ class StacksTest {
     @Test
     void horizontal3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.hstack, Bootstrap.gap_3)
                         .with(
@@ -214,7 +215,7 @@ class StacksTest {
     @Test
     void examples() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.vstack, Bootstrap.gap_2, Bootstrap.col_md_5, Bootstrap.mx_auto)
                         .with(
@@ -255,7 +256,7 @@ class StacksTest {
     @Test
     void examples2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.hstack, Bootstrap.gap_3)
                         .with(

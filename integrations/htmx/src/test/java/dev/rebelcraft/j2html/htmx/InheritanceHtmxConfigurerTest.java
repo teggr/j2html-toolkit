@@ -22,7 +22,7 @@ class InheritanceHtmxConfigurerTest {
     @Test
     void attributeInheritance() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(div()
                         .with(
                                 button()
@@ -62,7 +62,7 @@ class InheritanceHtmxConfigurerTest {
     @Test
     void attributeInheritance2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxConfirm("Are you sure?"))
                         .with(

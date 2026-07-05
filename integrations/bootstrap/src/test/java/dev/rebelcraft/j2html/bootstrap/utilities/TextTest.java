@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class TextTest {
     @Test
     void textAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.text_start)
@@ -104,7 +105,7 @@ class TextTest {
     @Test
     void textWrappingAndOverflow() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.badge, Bootstrap.text_bg_primary, Bootstrap.text_wrap)
                         .withStyle("width: 6rem;")
@@ -130,7 +131,7 @@ class TextTest {
     @Test
     void textWrappingAndOverflow2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.text_nowrap, Bootstrap.bg_body_secondary, Bootstrap.border)
                         .withStyle("width: 8rem;")
@@ -156,7 +157,7 @@ class TextTest {
     @Test
     void wordbreak() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p()
                         .withClasses(Bootstrap.text_break)
                         .with(
@@ -181,7 +182,7 @@ class TextTest {
     @Test
     void textTransform() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.text_lowercase)
@@ -224,7 +225,7 @@ class TextTest {
     @Test
     void fontSize() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.fs_1)
@@ -291,7 +292,7 @@ class TextTest {
     @Test
     void fontWeightAndItalics() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.fw_bold)
@@ -382,7 +383,7 @@ class TextTest {
     @Test
     void lineHeight() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.lh_1)
@@ -433,7 +434,7 @@ class TextTest {
     @Test
     void monospace() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p()
                         .withClasses(Bootstrap.font_monospace)
                         .with(
@@ -458,7 +459,7 @@ class TextTest {
     @Test
     void resetColor() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p()
                         .withClasses(Bootstrap.text_body_secondary)
                         .with(
@@ -494,7 +495,7 @@ class TextTest {
     @Test
     void textDecoration() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.text_decoration_underline)

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class InputGroupTest {
     @Test
     void basicExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                   div()
                    .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -201,7 +202,7 @@ class InputGroupTest {
     @Test
     void wrapping() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -380,7 +381,7 @@ class InputGroupTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.input_group_sm, Bootstrap.mb_3)
@@ -462,7 +463,7 @@ class InputGroupTest {
     @Test
     void checkboxesAndRadios() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -527,7 +528,7 @@ class InputGroupTest {
     @Test
     void multipleInputs() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.input_group)
                         .with(
@@ -572,7 +573,7 @@ class InputGroupTest {
     @Test
     void multipleAddOns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -649,7 +650,7 @@ class InputGroupTest {
     @Test
     void buttonAddOns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -786,7 +787,7 @@ class InputGroupTest {
     @Test
     void buttonWithDropdowns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -1168,7 +1169,7 @@ class InputGroupTest {
     @Test
     void segmentedButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -1409,7 +1410,7 @@ class InputGroupTest {
     @Test
     void customSelect() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)
@@ -1650,7 +1651,7 @@ class InputGroupTest {
     @Test
     void customFileInput() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.input_group, Bootstrap.mb_3)

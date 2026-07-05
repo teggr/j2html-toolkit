@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,7 +24,7 @@ class ModalTest {
     @Test
     void modalComponents() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                  .withClasses(Bootstrap.modal)
                  .withTabindex(-1)
@@ -120,7 +121,7 @@ class ModalTest {
     @Test
     void liveDemo() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -233,7 +234,7 @@ class ModalTest {
     @Test
     void staticBackdrop() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -350,7 +351,7 @@ class ModalTest {
     @Test
     void scrollingLongContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.modal_dialog, Bootstrap.modal_dialog_scrollable)
                         .with(
@@ -375,7 +376,7 @@ class ModalTest {
     @Test
     void verticallyCentered() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.modal_dialog, Bootstrap.modal_dialog_centered)
@@ -412,7 +413,7 @@ class ModalTest {
     @Test
     void tooltipsAndPopovers() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.modal_body)
                         .with(
@@ -502,7 +503,7 @@ class ModalTest {
     @Test
     void usingTheGrid() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.modal_body)
                         .with(
@@ -625,7 +626,7 @@ class ModalTest {
     @Test
     void varyingModalContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -805,7 +806,7 @@ class ModalTest {
     @Test
     void toggleBetweenModals() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.modal, Bootstrap.fade)
@@ -982,7 +983,7 @@ class ModalTest {
     @Test
     void optionalSizes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.modal_dialog, Bootstrap.modal_xl)
@@ -1025,7 +1026,7 @@ class ModalTest {
     @Test
     void fullScreenModal() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.modal_dialog, Bootstrap.modal_fullscreen_sm_down)
                         .with(

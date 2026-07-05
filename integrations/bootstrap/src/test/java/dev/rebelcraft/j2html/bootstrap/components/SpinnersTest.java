@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class SpinnersTest {
     @Test
     void borderSpinner() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
              .withClasses(Bootstrap.spinner_border)
              .attr(AriaRoles.roleStatus)
@@ -54,7 +55,7 @@ class SpinnersTest {
     @Test
     void colors() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.spinner_border, Bootstrap.text_primary)
@@ -193,7 +194,7 @@ class SpinnersTest {
     @Test
     void growingSpinner() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.spinner_grow)
                         .attr(AriaRoles.roleStatus)
@@ -225,7 +226,7 @@ class SpinnersTest {
     @Test
     void growingSpinner2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.spinner_grow, Bootstrap.text_primary)
@@ -364,7 +365,7 @@ class SpinnersTest {
     @Test
     void margin() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.spinner_border, Bootstrap.m_5)
                         .attr(AriaRoles.roleStatus)
@@ -396,7 +397,7 @@ class SpinnersTest {
     @Test
     void flex() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.justify_content_center)
                         .with(
@@ -434,7 +435,7 @@ class SpinnersTest {
     @Test
     void flex2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_items_center)
                         .with(
@@ -472,7 +473,7 @@ class SpinnersTest {
     @Test
     void floats2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.clearfix)
                         .with(
@@ -510,7 +511,7 @@ class SpinnersTest {
     @Test
     void textAlign() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.text_center)
                         .with(
@@ -548,7 +549,7 @@ class SpinnersTest {
     @Test
     void size() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.spinner_border, Bootstrap.spinner_border_sm)
@@ -597,7 +598,7 @@ class SpinnersTest {
     @Test
     void size2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.spinner_border)
@@ -648,7 +649,7 @@ class SpinnersTest {
     @Test
     void buttons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -714,7 +715,7 @@ class SpinnersTest {
     @Test
     void buttons2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withClasses(Bootstrap.btn, Bootstrap.btn_primary)

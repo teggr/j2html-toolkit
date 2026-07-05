@@ -21,7 +21,7 @@ class TriggersTest {
     @Test
     void triggeringRequests() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                  .attr(hxPost("/mouse_entered"))
                  .attr(hxTrigger(mouseenter))
@@ -47,7 +47,7 @@ class TriggersTest {
     @Test
     void triggerModifiers() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxPost("/mouse_entered"))
                         .attr(hxTrigger(mouseenter, once))
@@ -72,7 +72,7 @@ class TriggersTest {
     @Test
     void triggerModifiers2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 each(
                         input()
                                 .withType("text")
@@ -103,7 +103,7 @@ class TriggersTest {
     @Test
     void triggerFilters() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxGet("/clicked"))
                         .attr(hxTrigger(filteredEvent(click, "ctrlKey")))
@@ -129,7 +129,7 @@ class TriggersTest {
     @Test
     void pollingTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxGet("/news"))
                         .attr(hxTrigger(every("2s")))
@@ -151,7 +151,7 @@ class TriggersTest {
     @Test
     void loadPolling() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .attr(hxGet("/messages"))
                         .attr(hxTrigger(load(delay("1s"))))

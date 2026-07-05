@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ class NavbarTest {
     @Test
     void supportedContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                  .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                  .with(
@@ -248,7 +249,7 @@ class NavbarTest {
     @Test
     void textTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         nav()
                                 .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
@@ -310,7 +311,7 @@ class NavbarTest {
     @Test
     void imageTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -352,7 +353,7 @@ class NavbarTest {
     @Test
     void imageAndText() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -397,7 +398,7 @@ class NavbarTest {
     @Test
     void navTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -535,7 +536,7 @@ class NavbarTest {
     @Test
     void navTest2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -649,7 +650,7 @@ class NavbarTest {
     @Test
     void navTest3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -838,7 +839,7 @@ class NavbarTest {
     @Test
     void forms() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -891,7 +892,7 @@ class NavbarTest {
     @Test
     void forms2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -952,7 +953,7 @@ class NavbarTest {
     @Test
     void forms3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1007,7 +1008,7 @@ class NavbarTest {
     @Test
     void forms4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1054,7 +1055,7 @@ class NavbarTest {
     @Test
     void text2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1091,7 +1092,7 @@ class NavbarTest {
     @Test
     void text3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1220,7 +1221,7 @@ class NavbarTest {
     @Test
     void colorSchemes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         nav()
                                 .withClasses(Bootstrap.navbar, Bootstrap.bg_dark, Bootstrap.border_bottom, border_body)
@@ -1266,7 +1267,7 @@ class NavbarTest {
     @Test
     void containersTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         nav()
                                 .withClasses(Bootstrap.navbar, Bootstrap.bg_dark, Bootstrap.border_bottom,"border-body")
@@ -1312,7 +1313,7 @@ class NavbarTest {
     @Test
     void containersTest2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1350,7 +1351,7 @@ class NavbarTest {
     @Test
     void placement1() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1388,7 +1389,7 @@ class NavbarTest {
     @Test
     void placement2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.fixed_top, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1426,7 +1427,7 @@ class NavbarTest {
     @Test
     void placement3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.fixed_bottom, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1464,7 +1465,7 @@ class NavbarTest {
     @Test
     void placement4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.sticky_top, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1502,7 +1503,7 @@ class NavbarTest {
     @Test
     void placement5() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.sticky_bottom, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1540,7 +1541,7 @@ class NavbarTest {
     @Test
     void scrolling() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1764,7 +1765,7 @@ class NavbarTest {
     @Test
     void toggler() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -1912,7 +1913,7 @@ class NavbarTest {
     @Test
     void toggler2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -2059,7 +2060,7 @@ class NavbarTest {
     @Test
     void toggler3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary)
                         .with(
@@ -2206,7 +2207,7 @@ class NavbarTest {
     @Test
     void externalContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.collapse)
@@ -2289,7 +2290,7 @@ class NavbarTest {
     @Test
     void offcanvasNavbar() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.bg_body_tertiary, Bootstrap.fixed_top)
                         .with(
@@ -2526,7 +2527,7 @@ class NavbarTest {
     @Test
     void offcanvasNavbar2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.bg_body_tertiary, Bootstrap.fixed_top)
                         .with(
@@ -2590,7 +2591,7 @@ class NavbarTest {
     @Test
     void offcanvasNavbar3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar,"navbar-dark", Bootstrap.bg_dark, Bootstrap.fixed_top)
                         .with(

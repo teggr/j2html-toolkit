@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class TooltipsTest {
     @Test
     void tooltipsOnLinks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p()
                  .withClasses("muted")
                  .with(
@@ -94,7 +95,7 @@ class TooltipsTest {
     @Test
     void customTooltip() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                         .withType("button")
                         .withClasses(Bootstrap.btn, Bootstrap.btn_secondary)
@@ -124,7 +125,7 @@ class TooltipsTest {
     @Test
     void directions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")

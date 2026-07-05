@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class BadgesTest {
     @Test
     void headings() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         h1()
                                 .with(
@@ -130,7 +131,7 @@ class BadgesTest {
     @Test
     void buttons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                         .withType("button")
                         .withClasses(Bootstrap.btn, Bootstrap.btn_primary)
@@ -164,7 +165,7 @@ class BadgesTest {
     @Test
     void positioned() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                         .withType("button")
                         .withClasses(Bootstrap.btn, Bootstrap.btn_primary, Bootstrap.position_relative)
@@ -206,7 +207,7 @@ class BadgesTest {
     @Test
     void positioned2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                         .withType("button")
                         .withClasses(Bootstrap.btn, Bootstrap.btn_primary, Bootstrap.position_relative)
@@ -246,7 +247,7 @@ class BadgesTest {
     @Test
     void backgroundColors() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.badge, Bootstrap.text_bg_primary)
@@ -329,7 +330,7 @@ class BadgesTest {
     @Test
     void pillBadges() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         span()
                                 .withClasses(Bootstrap.badge, Bootstrap.rounded_pill, Bootstrap.text_bg_primary)

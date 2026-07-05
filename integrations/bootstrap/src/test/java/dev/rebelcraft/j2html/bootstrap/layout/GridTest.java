@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.div;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +23,7 @@ class GridTest {
     @Test
     void gridExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -66,7 +67,7 @@ class GridTest {
     @Test
     void equalWidthExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -126,7 +127,7 @@ class GridTest {
     @Test
     void oneColumnWidthExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -193,7 +194,7 @@ class GridTest {
     @Test
     void variableWidthExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -261,7 +262,7 @@ class GridTest {
     @Test
     void responsiveClassesAllBreakpointsExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -329,7 +330,7 @@ class GridTest {
     @Test
     void stackedToHorizontalExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -397,7 +398,7 @@ class GridTest {
     @Test
     void mixAndMatchExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -481,7 +482,7 @@ class GridTest {
     @Test
     void rowColumnsExample1() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -532,7 +533,7 @@ class GridTest {
     @Test
     void rowColumnsExample2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -583,7 +584,7 @@ class GridTest {
     @Test
     void rowColumnsExample3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -634,7 +635,7 @@ class GridTest {
     @Test
     void rowColumnsExample4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -685,7 +686,7 @@ class GridTest {
     @Test
     void rowColumnsExample5() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -736,7 +737,7 @@ class GridTest {
     @Test
     void rowColumnsExample6() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
@@ -787,7 +788,7 @@ class GridTest {
     @Test
     void nestingExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
 
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)

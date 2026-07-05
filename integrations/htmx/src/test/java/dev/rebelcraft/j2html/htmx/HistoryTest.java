@@ -21,7 +21,7 @@ class HistoryTest {
     @Test
     void historySupport() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 a()
                         .attr(hxGet("/blog"))
                         .attr(hxPushUrl("true"))

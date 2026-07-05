@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,7 +24,7 @@ class NavsAndTabsTest {
     @Test
     void baseNav() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                  .withClasses(Bootstrap.nav)
                  .with(
@@ -111,7 +112,7 @@ class NavsAndTabsTest {
     @Test
     void baseNav2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.nav)
                         .with(
@@ -175,7 +176,7 @@ class NavsAndTabsTest {
     @Test
     void horizontalAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.justify_content_center)
                         .with(
@@ -264,7 +265,7 @@ class NavsAndTabsTest {
     @Test
     void horizontalAlignment2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.justify_content_end)
                         .with(
@@ -352,7 +353,7 @@ class NavsAndTabsTest {
     @Test
     void vertical() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.flex_column)
                         .with(
@@ -440,7 +441,7 @@ class NavsAndTabsTest {
     @Test
     void vertical2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.nav, Bootstrap.flex_column)
                         .with(
@@ -504,7 +505,7 @@ class NavsAndTabsTest {
     @Test
     void tabs() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_tabs)
                         .with(
@@ -592,7 +593,7 @@ class NavsAndTabsTest {
     @Test
     void pills() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills)
                         .with(
@@ -680,7 +681,7 @@ class NavsAndTabsTest {
     @Test
     void underline() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_underline)
                         .with(
@@ -768,7 +769,7 @@ class NavsAndTabsTest {
     @Test
     void fillAndJustify() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills, Bootstrap.nav_fill)
                         .with(
@@ -856,7 +857,7 @@ class NavsAndTabsTest {
     @Test
     void fillAndJustify2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills, Bootstrap.nav_fill)
                         .with(
@@ -920,7 +921,7 @@ class NavsAndTabsTest {
     @Test
     void fillAndJustify3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills, Bootstrap.nav_justified)
                         .with(
@@ -1008,7 +1009,7 @@ class NavsAndTabsTest {
     @Test
     void fillAndJustify4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills, Bootstrap.nav_justified)
                         .with(
@@ -1072,7 +1073,7 @@ class NavsAndTabsTest {
     @Test
     void workingWithFlexUtilities() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills, Bootstrap.flex_column, Bootstrap.flex_sm_row)
                         .with(
@@ -1137,7 +1138,7 @@ class NavsAndTabsTest {
     @Test
     void tabsWithDropdowns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_tabs)
                         .with(
@@ -1300,7 +1301,7 @@ class NavsAndTabsTest {
     @Test
     void pillsWithDropdowns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.nav, Bootstrap.nav_pills)
                         .with(

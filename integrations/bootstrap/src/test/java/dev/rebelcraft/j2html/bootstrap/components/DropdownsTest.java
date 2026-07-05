@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,7 @@ class DropdownsTest {
     @Test
     void singleButton() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                  .withClasses(Bootstrap.dropdown)
                  .with(
@@ -109,7 +110,7 @@ class DropdownsTest {
     @Test
     void singleButton2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown)
                         .with(
@@ -194,7 +195,7 @@ class DropdownsTest {
     @Test
     void singleButton3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .with(
@@ -301,7 +302,7 @@ class DropdownsTest {
     @Test
     void splitButton() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .with(
@@ -422,7 +423,7 @@ class DropdownsTest {
     @Test
     void sizing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group)
@@ -510,7 +511,7 @@ class DropdownsTest {
     @Test
     void sizing2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group)
@@ -598,7 +599,7 @@ class DropdownsTest {
     @Test
     void darkDropdowns() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown)
                         .with(
@@ -704,7 +705,7 @@ class DropdownsTest {
     @Test
     void darkDropdowns2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 nav()
                         .withClasses(Bootstrap.navbar, Bootstrap.navbar_expand_lg, Bootstrap.navbar_dark, Bootstrap.bg_dark)
                         .with(
@@ -843,7 +844,7 @@ class DropdownsTest {
     @Test
     void centered() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown_center)
                         .with(
@@ -927,7 +928,7 @@ class DropdownsTest {
     @Test
     void dropUp() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group, Bootstrap.dropup)
@@ -1017,7 +1018,7 @@ class DropdownsTest {
     @Test
     void dropUpCentered() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropup_center, Bootstrap.dropup)
                         .with(
@@ -1101,7 +1102,7 @@ class DropdownsTest {
     @Test
     void dropEnd() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropup_center, Bootstrap.dropup)
                         .with(
@@ -1258,7 +1259,7 @@ class DropdownsTest {
     @Test
     void dropStart() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group, Bootstrap.dropstart)
@@ -1348,7 +1349,7 @@ class DropdownsTest {
     @Test
     void menuItems() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown)
                         .with(
@@ -1432,7 +1433,7 @@ class DropdownsTest {
     @Test
     void menuItems2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.dropdown_menu)
                         .with(
@@ -1510,7 +1511,7 @@ class DropdownsTest {
     @Test
     void active() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.dropdown_menu)
                         .with(
@@ -1578,7 +1579,7 @@ class DropdownsTest {
     @Test
     void disabled() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.dropdown_menu)
                         .with(
@@ -1645,7 +1646,7 @@ class DropdownsTest {
     @Test
     void menuAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .with(
@@ -1729,7 +1730,7 @@ class DropdownsTest {
     @Test
     void responsiveAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .with(
@@ -1814,7 +1815,7 @@ class DropdownsTest {
     @Test
     void responsiveAlignment2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.btn_group)
                         .with(
@@ -1899,7 +1900,7 @@ class DropdownsTest {
     @Test
     void alignmentOptions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group)
@@ -2389,7 +2390,7 @@ class DropdownsTest {
     @Test
     void headers() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.dropdown_menu)
                         .with(
@@ -2453,7 +2454,7 @@ class DropdownsTest {
     @Test
     void dividers() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.dropdown_menu)
                         .with(
@@ -2540,7 +2541,7 @@ class DropdownsTest {
     @Test
     void textTest() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown_menu, Bootstrap.p_4, Bootstrap.text_body_secondary)
                         .withStyle("max-width: 200px;")
@@ -2579,7 +2580,7 @@ class DropdownsTest {
     @Test
     void forms() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown_menu)
                         .with(
@@ -2707,7 +2708,7 @@ class DropdownsTest {
     @Test
     void forms2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.dropdown)
                         .with(
@@ -2827,7 +2828,7 @@ class DropdownsTest {
     @Test
     void dropdownOptions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex)
                         .with(
@@ -3023,7 +3024,7 @@ class DropdownsTest {
     @Test
     void autoCloseBehaviour() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.btn_group)

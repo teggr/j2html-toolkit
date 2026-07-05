@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,7 +23,7 @@ class ColumnsTest {
     @Test
     void verticalAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -66,7 +67,7 @@ class ColumnsTest {
     @Test
     void verticalAlignment2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -110,7 +111,7 @@ class ColumnsTest {
     @Test
     void verticalAlignment3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -154,7 +155,7 @@ class ColumnsTest {
     @Test
     void verticalAlignment4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -198,7 +199,7 @@ class ColumnsTest {
     @Test
     void horizontalAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -317,7 +318,7 @@ class ColumnsTest {
     @Test
     void columnWrapping() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClass(Bootstrap.container)
                         .with(
@@ -375,7 +376,7 @@ class ColumnsTest {
     @Test
     void columnBreaks() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -430,7 +431,7 @@ class ColumnsTest {
     @Test
     void columnBreaks2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -485,7 +486,7 @@ class ColumnsTest {
     @Test
     void orderClasses() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -529,7 +530,7 @@ class ColumnsTest {
     @Test
     void orderClasses2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -573,7 +574,7 @@ class ColumnsTest {
     @Test
     void offsetClasses() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -639,7 +640,7 @@ class ColumnsTest {
     @Test
     void offsetClasses2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -694,7 +695,7 @@ class ColumnsTest {
     @Test
     void marginUtilities() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.container, Bootstrap.text_center)
                         .with(
@@ -765,7 +766,7 @@ class ColumnsTest {
     @Test
     void standaloneColumnClasses() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div(
                         div(".col-3: width of 25%")
                                 .withClasses( Bootstrap.col_3, Bootstrap.p_3, Bootstrap.mb_2),
@@ -796,7 +797,7 @@ class ColumnsTest {
     @Test
     void standaloneColumnClasses2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClass(Bootstrap.clearfix)
                         .with(

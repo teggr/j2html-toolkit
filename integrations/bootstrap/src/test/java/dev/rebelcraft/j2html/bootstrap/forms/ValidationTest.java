@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class ValidationTest {
     @Test
     void customStyles() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                      .withClasses(Bootstrap.row, Bootstrap.g_3,Validation.needs_validation)
                      .withCondNovalidate(true)
@@ -310,7 +311,7 @@ class ValidationTest {
     @Test
     void browserDefaults() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.g_3)
                         .with(
@@ -541,7 +542,7 @@ class ValidationTest {
     @Test
     void serverside() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.g_3)
                         .with(
@@ -845,7 +846,7 @@ class ValidationTest {
     @Test
     void supportedElements() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.was_validated)
                         .with(
@@ -1072,7 +1073,7 @@ class ValidationTest {
     @Test
     void tooltips() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 form()
                         .withClasses(Bootstrap.row, Bootstrap.g_3,Validation.needs_validation)
                         .withCondNovalidate(true)

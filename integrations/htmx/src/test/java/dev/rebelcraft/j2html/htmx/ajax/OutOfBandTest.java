@@ -21,7 +21,7 @@ class OutOfBandTest {
     @Test
     void outOfBandSwaps() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 each(
                         div()
                                 .withId("message")

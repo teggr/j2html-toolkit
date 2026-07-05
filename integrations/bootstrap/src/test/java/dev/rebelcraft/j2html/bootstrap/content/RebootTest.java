@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class RebootTest {
     @Test
     void paragraphs() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p("This is an example paragraph.")
         );
 
@@ -43,7 +44,7 @@ class RebootTest {
     @Test
     void links() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a("This is an example link")
                         .withHref("#")
         );
@@ -65,7 +66,7 @@ class RebootTest {
     @Test
     void links2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a("This is an example link")
                         .withHref("#")
                         .attr("style", "--bs-link-opacity:.5")
@@ -88,7 +89,7 @@ class RebootTest {
     @Test
     void links3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 a("This is a placeholder link")
         );
 
@@ -109,7 +110,7 @@ class RebootTest {
     @Test
     void horizontalRules() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div(
                         hr(),
                         div()
@@ -146,7 +147,7 @@ class RebootTest {
     @Test
     void inlineCode() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p(join(
                         text("For example, "),
                         code("<section>"),
@@ -171,7 +172,7 @@ class RebootTest {
     @Test
 void codeBlocks() throws Exception {
 
-    String renderedHtml = uiDocumentation.render(
+    String renderedHtml = domContentToString(
             pre(
               code("<p>Sample text here...</p>\n<p>And another line of sample text here...</p>")
             )
@@ -193,7 +194,7 @@ void codeBlocks() throws Exception {
     @Test
     void variables() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         var()
                                 .with(
@@ -244,7 +245,7 @@ void codeBlocks() throws Exception {
     @Test
     void userInput() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         text("To switch directories, type "),
                         kbd()
@@ -299,7 +300,7 @@ void codeBlocks() throws Exception {
     @Test
     void sample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 samp()
                         .with(
                                 text("This text is meant to be treated as sample output from a computer program.")
@@ -323,7 +324,7 @@ void codeBlocks() throws Exception {
     @Test
     void tables() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 table()
                         .with(
                                 caption()
@@ -494,7 +495,7 @@ void codeBlocks() throws Exception {
     @Test
     void pointersOnButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 span()
                         .attr(AriaRoles.roleButton)
                         .withTabindex(0)

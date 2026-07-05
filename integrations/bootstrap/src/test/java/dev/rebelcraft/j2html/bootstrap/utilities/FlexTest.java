@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class FlexTest {
     @Test
     void enableFlexBehaviours() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.p_2)
                         .with(
@@ -46,7 +47,7 @@ class FlexTest {
     @Test
     void enableFlexBehaviours2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_inline_flex, Bootstrap.p_2)
                         .with(
@@ -71,7 +72,7 @@ class FlexTest {
     @Test
     void direction() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_flex, Bootstrap.flex_row, Bootstrap.mb_3)
@@ -150,7 +151,7 @@ class FlexTest {
     @Test
     void direction2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_flex, Bootstrap.flex_column, Bootstrap.mb_3)
@@ -229,7 +230,7 @@ class FlexTest {
     @Test
     void justifyContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_flex, Bootstrap.justify_content_start)
@@ -296,7 +297,7 @@ class FlexTest {
     @Test
     void alignItems() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_flex, Bootstrap.align_items_start)
@@ -355,7 +356,7 @@ class FlexTest {
     @Test
     void alignSelf() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.align_self_start)
@@ -414,7 +415,7 @@ class FlexTest {
     @Test
     void fill() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex)
                         .with(
@@ -461,7 +462,7 @@ class FlexTest {
     @Test
     void growAndShrink() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex)
                         .with(
@@ -508,7 +509,7 @@ class FlexTest {
     @Test
     void growAndShrink2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex)
                         .with(
@@ -547,7 +548,7 @@ class FlexTest {
     @Test
     void withAlignItems() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.d_flex, Bootstrap.align_items_start, Bootstrap.flex_column, Bootstrap.mb_3)
@@ -629,7 +630,7 @@ class FlexTest {
     @Test
     void wrap() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.flex_nowrap)
                         .with(
@@ -654,7 +655,7 @@ class FlexTest {
     @Test
     void wrap2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.flex_wrap)
                         .with(
@@ -679,7 +680,7 @@ class FlexTest {
     @Test
     void wrap3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.flex_wrap_reverse)
                         .with(
@@ -704,7 +705,7 @@ class FlexTest {
     @Test
     void order() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.flex_nowrap)
                         .with(
@@ -751,7 +752,7 @@ class FlexTest {
     @Test
     void alignContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_content_start, Bootstrap.flex_wrap)
                         .with(
@@ -776,7 +777,7 @@ class FlexTest {
     @Test
     void alignContent2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_content_end, Bootstrap.flex_wrap)
                         .with(
@@ -801,7 +802,7 @@ class FlexTest {
     @Test
     void alignContent3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_content_center, Bootstrap.flex_wrap)
                         .with(
@@ -826,7 +827,7 @@ class FlexTest {
     @Test
     void alignContent4() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_content_between, Bootstrap.flex_wrap)
                         .with(
@@ -851,7 +852,7 @@ class FlexTest {
     @Test
     void alignContent5() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_content_around, Bootstrap.flex_wrap)
                         .with(
@@ -876,7 +877,7 @@ class FlexTest {
     @Test
     void alignContent6() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_content_stretch, Bootstrap.flex_wrap)
                         .with(
@@ -901,7 +902,7 @@ class FlexTest {
     @Test
     void mediaObject() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex)
                         .with(
@@ -942,7 +943,7 @@ class FlexTest {
     @Test
     void mediaObject2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.align_items_center)
                         .with(

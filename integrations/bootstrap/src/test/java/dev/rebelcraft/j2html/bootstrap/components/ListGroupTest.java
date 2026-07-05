@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,7 +23,7 @@ class ListGroupTest {
     @Test
     void basicExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                  .withClasses(Bootstrap.list_group)
                  .with(
@@ -85,7 +86,7 @@ class ListGroupTest {
     @Test
     void activeItems() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -151,7 +152,7 @@ class ListGroupTest {
     @Test
     void disabledItems() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -217,7 +218,7 @@ class ListGroupTest {
     @Test
     void linksAndButtons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -290,7 +291,7 @@ class ListGroupTest {
     @Test
     void linksAndButtons2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -362,7 +363,7 @@ class ListGroupTest {
     @Test
     void flush() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group, Bootstrap.list_group_flush)
                         .with(
@@ -425,7 +426,7 @@ class ListGroupTest {
     @Test
     void numbered() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ol()
                         .withClasses(Bootstrap.list_group, Bootstrap.list_group_numbered)
                         .with(
@@ -472,7 +473,7 @@ class ListGroupTest {
     @Test
     void numbered2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ol()
                         .withClasses(Bootstrap.list_group, Bootstrap.list_group_numbered)
                         .with(
@@ -585,7 +586,7 @@ class ListGroupTest {
     @Test
     void horizontal() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         ul()
                                 .withClasses(Bootstrap.list_group, Bootstrap.list_group_horizontal)
@@ -784,7 +785,7 @@ class ListGroupTest {
     @Test
     void variants() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -879,7 +880,7 @@ class ListGroupTest {
     @Test
     void linksAndButtons3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -983,7 +984,7 @@ class ListGroupTest {
     @Test
     void withBadges() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -1054,7 +1055,7 @@ class ListGroupTest {
     @Test
     void customContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -1213,7 +1214,7 @@ class ListGroupTest {
     @Test
     void checkboxesAndRadios() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -1299,7 +1300,7 @@ class ListGroupTest {
     @Test
     void checkboxesAndRadios2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(
@@ -1389,7 +1390,7 @@ class ListGroupTest {
     @Test
     void checkboxesAndRadios3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_group)
                         .with(

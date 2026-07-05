@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class StretchedlinkTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
              .withClasses(Bootstrap.card)
              .withStyle("width: 18rem;")
@@ -81,7 +82,7 @@ class StretchedlinkTest {
     @Test
     void example2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.d_flex, Bootstrap.position_relative)
                         .with(
@@ -138,7 +139,7 @@ class StretchedlinkTest {
     @Test
     void example3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.row, Bootstrap.g_0, Bootstrap.bg_body_secondary, Bootstrap.position_relative)
                         .with(
@@ -202,7 +203,7 @@ class StretchedlinkTest {
     @Test
     void identifyingTheContainingBlock() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.card)
                         .withStyle("width: 18rem;")

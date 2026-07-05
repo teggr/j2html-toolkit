@@ -22,22 +22,17 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>rebel-ui-test</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.rebelcraft</groupId>
             <artifactId>j2html-extensions</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-java-html-preview</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
+            <artifactId>java-html-tooling-html-test-docs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.rebelcraft</groupId>
+            <artifactId>java-html-tooling-html-preview</artifactId>
         </dependency>
 
     </dependencies>

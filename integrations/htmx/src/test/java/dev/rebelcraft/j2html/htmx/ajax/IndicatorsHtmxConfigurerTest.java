@@ -22,7 +22,7 @@ class IndicatorsHtmxConfigurerTest {
     @Test
     void requestIndicators() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(button().with(
                                 text("Click Me!"),
                                 img()
@@ -51,7 +51,7 @@ class IndicatorsHtmxConfigurerTest {
     @Test
     void requestIndicators2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 div()
                         .with(
                                 hx(button()

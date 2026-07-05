@@ -21,7 +21,7 @@ class SwappingTest {
     @Test
     void swapOptions() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 button()
                         .attr(hxPost("/like"))
                         .attr(hxSwap(outerHTML, ignoreTitle("true")))

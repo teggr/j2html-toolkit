@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class TypographyTest {
     @Test
     void headings() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         h1()
                                 .with(
@@ -83,7 +84,7 @@ class TypographyTest {
     @Test
     void headings2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .withClasses(Bootstrap.h1)
@@ -150,7 +151,7 @@ class TypographyTest {
     @Test
     void customisedHeadings() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 h3()
                         .with(
                                 text("Fancy display heading"),
@@ -182,7 +183,7 @@ class TypographyTest {
     @Test
     void displayHeadings() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         h1()
                                 .withClasses(Bootstrap.display_1)
@@ -249,7 +250,7 @@ class TypographyTest {
     @Test
     void lead() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 p()
                         .withClasses(Bootstrap.lead)
                         .with(
@@ -274,7 +275,7 @@ class TypographyTest {
     @Test
     void inlineTextElements() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -393,7 +394,7 @@ class TypographyTest {
     @Test
     void abbreviations() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         p()
                                 .with(
@@ -440,7 +441,7 @@ class TypographyTest {
     @Test
     void blockQuotes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 blockquote()
                         .withClasses(Bootstrap.blockquote)
                         .with(
@@ -470,7 +471,7 @@ class TypographyTest {
     @Test
     void namingASource() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 figure()
                         .with(
                                 blockquote()
@@ -521,7 +522,7 @@ class TypographyTest {
     @Test
     void alignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 figure()
                         .withClasses(Bootstrap.text_center)
                         .with(
@@ -573,7 +574,7 @@ class TypographyTest {
     @Test
     void alignment2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 figure()
                         .withClasses(Bootstrap.text_end)
                         .with(
@@ -625,7 +626,7 @@ class TypographyTest {
     @Test
     void listsUnstyled() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_unstyled)
                         .with(
@@ -716,7 +717,7 @@ class TypographyTest {
     @Test
     void listsInline() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 ul()
                         .withClasses(Bootstrap.list_inline)
                         .with(
@@ -763,7 +764,7 @@ class TypographyTest {
     @Test
     void descriptionListAlignment() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 dl()
                         .withClasses(Bootstrap.row)
                         .with(

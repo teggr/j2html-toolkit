@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class RatioTest {
     @Test
     void example() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                     .withClasses(Bootstrap.ratio, Bootstrap.ratio_16x9)
                      .with(
@@ -50,7 +51,7 @@ class RatioTest {
     @Test
     void aspectRatios() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.ratio, Bootstrap.ratio_1x1)
@@ -121,7 +122,7 @@ class RatioTest {
     @Test
     void customRatios() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.ratio)
                         .withStyle("--bs-aspect-ratio: 50%;")
@@ -152,7 +153,7 @@ class RatioTest {
     @Test
     void customRatios2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.ratio, Bootstrap.ratio_4x3)
                         .with(

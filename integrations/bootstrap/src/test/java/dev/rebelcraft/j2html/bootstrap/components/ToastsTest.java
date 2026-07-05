@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,7 @@ class ToastsTest {
     @Test
     void basic() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                  .withClasses(Bootstrap.toast)
                  .attr(AriaRoles.roleAlert)
@@ -93,7 +94,7 @@ class ToastsTest {
     @Test
     void liveExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -185,7 +186,7 @@ class ToastsTest {
     @Test
     void translucent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.toast)
                         .attr(AriaRoles.roleAlert)
@@ -259,7 +260,7 @@ class ToastsTest {
     @Test
     void stacking() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.toast_container, Bootstrap.position_static)
                         .with(
@@ -396,7 +397,7 @@ class ToastsTest {
     @Test
     void customContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.toast, Bootstrap.align_items_center)
                         .attr(AriaRoles.roleAlert)
@@ -449,7 +450,7 @@ class ToastsTest {
     @Test
     void customContent2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.toast)
                         .attr(AriaRoles.roleAlert)
@@ -512,7 +513,7 @@ class ToastsTest {
     @Test
     void colorSchemes() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.toast, Bootstrap.align_items_center, Bootstrap.text_bg_primary, Bootstrap.border_0)
                         .attr(AriaRoles.roleAlert)
@@ -565,7 +566,7 @@ class ToastsTest {
     @Test
     void placement() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         form()
                                 .with(
@@ -750,7 +751,7 @@ class ToastsTest {
     @Test
     void placement2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .attr(
                                 AriaStatesAndProperties.ariaLive("polite")
@@ -909,7 +910,7 @@ class ToastsTest {
     @Test
     void placement3() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .attr(
                                 AriaStatesAndProperties.ariaLive("polite")
@@ -996,7 +997,7 @@ class ToastsTest {
     @Test
     void accessibility() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.toast)
                         .attr(AriaRoles.roleAlert)
@@ -1041,7 +1042,7 @@ class ToastsTest {
     @Test
     void accessibility2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .attr(AriaRoles.roleAlert)
                         .attr(

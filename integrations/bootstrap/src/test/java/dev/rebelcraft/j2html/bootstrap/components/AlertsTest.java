@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static dev.rebelcraft.j2html.ext.ExtendedTagCreator.*;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,9 +29,9 @@ class AlertsTest {
     @Test
     void examples() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 extracted()
-                );
+        );
 
         //language=HTML
         assertEquals("""
@@ -129,7 +130,7 @@ class AlertsTest {
     @Test
     void liveExample() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withId("liveAlertPlaceholder"),
@@ -163,7 +164,7 @@ class AlertsTest {
     @Test
     void linkColor() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         div()
                                 .withClasses(Bootstrap.alert, Bootstrap.alert_primary)
@@ -342,7 +343,7 @@ class AlertsTest {
     @Test
     void additionalContent() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.alert, Bootstrap.alert_success)
                         .attr(AriaRoles.roleAlert)
@@ -391,7 +392,7 @@ class AlertsTest {
     @Test
     void icons() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.alert, Bootstrap.alert_primary, Bootstrap.d_flex, Bootstrap.align_items_center)
                         .attr(AriaRoles.roleAlert)
@@ -438,7 +439,7 @@ class AlertsTest {
     @Test
     void icons2() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         svg()
                                 .attr("xmlns","http://www.w3.org/2000/svg")
@@ -609,7 +610,7 @@ class AlertsTest {
     @Test
     void dismissing() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 div()
                         .withClasses(Bootstrap.alert, Bootstrap.alert_warning, Bootstrap.alert_dismissible, Bootstrap.fade, Bootstrap.show)
                         .attr(AriaRoles.roleAlert)

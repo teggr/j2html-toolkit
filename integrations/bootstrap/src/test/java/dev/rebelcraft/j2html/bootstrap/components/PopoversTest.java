@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -21,7 +22,7 @@ class PopoversTest {
     @Test
     void liveDemo() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 button()
                  .withType("button")
                  .withClasses(Bootstrap.btn, Bootstrap.btn_lg, Bootstrap.btn_danger)
@@ -50,7 +51,7 @@ class PopoversTest {
     @Test
     void fourDirections() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 each(
                         button()
                                 .withType("button")
@@ -121,7 +122,7 @@ class PopoversTest {
     @Test
     void disabledElements() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = domContentToString(
                 span()
                         .withClasses(Bootstrap.d_inline_block)
                         .withTabindex(0)

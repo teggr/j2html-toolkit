@@ -24,7 +24,7 @@ class HistoryHtmxConfigurerTest {
     @Test
     void historySupport() throws Exception {
 
-        String renderedHtml = uiDocumentation.render(
+        String renderedHtml = DocRenderer.domContentToString(
                 hx(a()
                         .with(
                                 text("Blog")
