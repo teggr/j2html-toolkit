@@ -15,7 +15,7 @@
     <name>j2html-java-html-preview</name>
 
     <properties>
-        <preview.api.version>0.0.2</preview.api.version>
+        <preview.api.version>0.0.5</preview.api.version>
     </properties>
     
     <dependencies>

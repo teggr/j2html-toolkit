@@ -1,10 +1,13 @@
 package dev.rebelcraft.j2html.bootstrap.components;
 
+import dev.rebelcraft.html.preview.Preview;
 import dev.rebelcraft.j2html.bootstrap.Bootstrap;
 import dev.rebelcraft.j2html.bootstrap.BootstrapIcons;
 import dev.rebelcraft.j2html.ext.aria.AriaRoles;
 import dev.rebelcraft.j2html.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uitest.UiDocumentation;
+import j2html.tags.DomContent;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
@@ -26,56 +29,7 @@ class AlertsTest {
     void examples() throws Exception {
 
         String renderedHtml = uiDocumentation.render(
-                each(
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_primary)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple primary alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_secondary)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple secondary alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_success)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple success alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_danger)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple danger alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_warning)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple warning alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_info)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple info alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_light)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple light alert—check it out!")
-                        ),
-                      div()
-                       .withClasses(Bootstrap.alert, Bootstrap.alert_dark)
-                       .attr(AriaRoles.roleAlert)
-                       .with(
-                          text("A simple dark alert—check it out!")
-                        )
-                    )
+                extracted()
                 );
 
         //language=HTML
@@ -111,6 +65,65 @@ class AlertsTest {
 
         uiDocumentation.documentSource("examples");
 
+    }
+
+    @Preview
+    String myName() {
+        return "robin";
+    }
+
+    @Preview
+    DomContent extracted() {
+        return each(
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_primary)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple primary alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_secondary)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple secondary alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_success)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple success alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_danger)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple danger alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_warning)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple warning alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_info)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple info alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_light)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple light alert—check it out!")
+                ),
+              div()
+               .withClasses(Bootstrap.alert, Bootstrap.alert_dark)
+               .attr(AriaRoles.roleAlert)
+               .with(
+                  text("A simple dark alert—check it out!")
+                )
+            );
     }
 
     @Test
