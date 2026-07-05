@@ -18,37 +18,37 @@
         <dependencies>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-extensions</artifactId>
+                <artifactId>j2html-toolkit-extensions</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-bootstrap</artifactId>
+                <artifactId>j2html-toolkit-integrations-bootstrap</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-htmx</artifactId>
+                <artifactId>j2html-toolkit-integrations-htmx</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-engine-core</artifactId>
+                <artifactId>j2html-toolkit-template-engine</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-engine-spring</artifactId>
+                <artifactId>j2html-toolkit-spring-template-engine</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-engine-spring-boot-starter</artifactId>
+                <artifactId>j2html-toolkit-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-extensions-spring-boot-starter</artifactId>
+                <artifactId>j2html-toolkit-preview</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

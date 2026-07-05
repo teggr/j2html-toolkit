@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>j2html-integrations</artifactId>
+        <artifactId>j2html-toolkit-integrations</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-bootstrap</artifactId>
-    <name>j2html-bootstrap</name>
+    <artifactId>j2html-toolkit-integrations-bootstrap</artifactId>
+    <name>j2html-toolkit-integrations-bootstrap</name>
 
     <properties>
         <!-- aligned with the boostrap version -->
@@ -22,17 +22,17 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions</artifactId>
+            <artifactId>j2html-toolkit-extensions</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>java-html-tooling-html-test-docs</artifactId>
+            <artifactId>java-html-toolkit-test-docs</artifactId>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>java-html-tooling-html-preview</artifactId>
+            <artifactId>java-html-toolkit-preview</artifactId>
         </dependency>
 
     </dependencies>

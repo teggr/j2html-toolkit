@@ -3,36 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>j2html-toolkit-integrations</artifactId>
+        <artifactId>j2html-toolkit</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-toolkit-integrations-htmx</artifactId>
-    <name>j2html-toolkit-integrations-htmx</name>
-
-    <properties>
-        <htmx.version>2.0.0</htmx.version>
-    </properties>
-
+    <artifactId>j2html-toolkit-preview</artifactId>
+    <packaging>jar</packaging>
+    <name>j2html-toolkit-preview</name>
+    
     <dependencies>
-
-        <dependency>
-            <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-toolkit-extensions</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.rebelcraft</groupId>
-            <artifactId>java-html-toolkit-test-docs</artifactId>
-        </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>java-html-toolkit-preview</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.j2html</groupId>
+            <artifactId>j2html</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

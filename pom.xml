@@ -26,12 +26,13 @@
     </properties>
 
     <modules>
-        <module>java-html-preview</module>
+        <module>preview</module>
         <module>extensions</module>
         <module>template-engine</module>
         <module>integrations</module>
         <module>spring</module>
         <module>bom</module>
+        <module>examples</module>
     </modules>
 
     <dependencyManagement>
@@ -61,14 +62,14 @@
             <!-- java html tooling -->
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>java-html-tooling-html-test-docs</artifactId>
-                <version>1.0.0</version>
+                <artifactId>java-html-toolkit-test-docs</artifactId>
+                <version>1.0.1</version>
                 <scope>test</scope>
             </dependency>
              <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>java-html-tooling-html-preview</artifactId>
-                <version>1.0.0</version>
+                <artifactId>java-html-toolkit-preview</artifactId>
+                <version>1.0.1</version>
                 <scope>test</scope>
             </dependency>
 

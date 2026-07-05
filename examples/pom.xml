@@ -14,12 +14,13 @@
     <name>j2html-toolkit-examples</name>
 
     <modules>
-        <module>j2html-example-webapp</module>
+        <module>webapp</module>
     </modules>
 
     <properties>
         <junit.version>5.11.4</junit.version>
         <spring.boot.version>4.0.6</spring.boot.version>
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <dependencyManagement>
@@ -28,6 +29,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-toolkit-bom</artifactId>
+                <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

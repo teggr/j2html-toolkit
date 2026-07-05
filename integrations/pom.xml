@@ -10,8 +10,8 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-integrations</artifactId>
-    <name>j2html-integrations</name>
+    <artifactId>j2html-toolkit-integrations</artifactId>
+    <name>j2html-toolkit-integrations</name>
     <packaging>pom</packaging>
 
     <modules>
