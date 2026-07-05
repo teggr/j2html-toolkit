@@ -29,7 +29,7 @@
         <module>preview</module>
         <module>extensions</module>
         <module>template-engine</module>
-        <module>integrations</module>
+        <module>integration</module>
         <module>spring</module>
         <module>bom</module>
         <module>examples</module>

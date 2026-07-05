@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>j2html-toolkit-integrations</artifactId>
+        <artifactId>j2html-toolkit-integration</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-toolkit-integrations-bootstrap</artifactId>
-    <name>j2html-toolkit-integrations-bootstrap</name>
+    <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
+    <name>j2html-toolkit-integration-bootstrap</name>
 
     <properties>
         <!-- aligned with the boostrap version -->

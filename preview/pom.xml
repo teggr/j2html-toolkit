@@ -18,6 +18,7 @@
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>java-html-toolkit-preview</artifactId>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.j2html</groupId>

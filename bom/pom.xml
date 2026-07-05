@@ -23,12 +23,12 @@
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-toolkit-integrations-bootstrap</artifactId>
+                <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
-                <artifactId>j2html-toolkit-integrations-htmx</artifactId>
+                <artifactId>j2html-toolkit-integration-htmx</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

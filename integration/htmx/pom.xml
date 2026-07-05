@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dev.rebelcraft</groupId>
-        <artifactId>j2html-toolkit-integrations</artifactId>
+        <artifactId>j2html-toolkit-integration</artifactId>
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-toolkit-integrations-htmx</artifactId>
-    <name>j2html-toolkit-integrations-htmx</name>
+    <artifactId>j2html-toolkit-integration-htmx</artifactId>
+    <name>j2html-toolkit-integration-htmx</name>
 
     <properties>
         <htmx.version>2.0.0</htmx.version>
