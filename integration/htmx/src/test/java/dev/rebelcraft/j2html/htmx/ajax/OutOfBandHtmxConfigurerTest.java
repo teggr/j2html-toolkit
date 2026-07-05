@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import static dev.rebelcraft.j2html.htmx.Htmx.hx;
-import static dev.rebelcraft.j2html.htmx.HtmxAttributes.hxSwapOob;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

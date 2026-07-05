@@ -4,7 +4,6 @@ import sh.rebelstack.j2html.engine.J2HtmlEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
-import org.springframework.lang.Nullable;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
 
@@ -24,7 +23,6 @@ public class J2HtmlViewResolver implements ViewResolver, Ordered {
     }
 
     @Override
-    @Nullable
     public View resolveViewName(String viewName, Locale locale) {
         boolean knownTemplate = engine.isKnownTemplate(viewName);
         if (LOG.isDebugEnabled()) {

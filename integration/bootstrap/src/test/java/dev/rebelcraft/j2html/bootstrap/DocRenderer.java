@@ -2,8 +2,6 @@ package dev.rebelcraft.j2html.bootstrap;
 
 import java.io.IOException;
 import java.util.Collections;
-import java.util.function.Supplier;
-
 import dev.rebelcraft.uitest.ExtendedEscapeUtil;
 import j2html.Config;
 import j2html.rendering.IndentedHtml;
