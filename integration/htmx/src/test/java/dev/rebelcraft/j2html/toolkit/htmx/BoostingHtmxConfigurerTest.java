@@ -1,0 +1,91 @@
+package dev.rebelcraft.j2html.toolkit.htmx;
+
+import dev.rebelcraft.uitest.UiDocumentation;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
+
+import static dev.rebelcraft.j2html.toolkit.htmx.Htmx.hx;
+import static dev.rebelcraft.j2html.toolkit.htmx.HtmxAttributes.*;
+import static j2html.TagCreator.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class BoostingHtmxConfigurerTest {
+
+    private UiDocumentation uiDocumentation;
+
+    @BeforeEach
+    void init(TestInfo testInfo) {
+        uiDocumentation = new UiDocumentation(testInfo);
+    }
+
+    @Test
+    void boostingTest() throws Exception {
+
+        String renderedHtml = DocRenderer.domContentToString(
+                hx(div()
+                        .with(
+                                a()
+                                        .withHref("/blog")
+                                        .with(
+                                                text("Blog")
+                                        )
+                        ),
+                        (hx) -> hx.boost("true")
+                )
+        );
+
+        //language=HTML
+        assertEquals("""
+                <div hx-boost="true">
+                  <a href="/blog">
+                    Blog
+                  </a>
+                </div>
+                """, renderedHtml);
+
+        // document
+        uiDocumentation.document("boosting-test", renderedHtml);
+
+        uiDocumentation.documentSource("boosting-test");
+
+    }
+
+    @Test
+    void progressiveEnhancement() throws Exception {
+
+        String renderedHtml = DocRenderer.domContentToString(
+                form()
+                        .withAction("/search")
+                        .withMethod("POST")
+                        .with(
+                                hx(input()
+                                        .withClasses("form-control")
+                                        .withType("search")
+                                        .withName("search")
+                                        .withPlaceholder("Begin typing to search users..."),
+                                        (hx) -> hx
+                                                .post("/search")
+                                                .trigger(keyup, changed, delay("500ms,"), "search")
+                                                .target("#search-results")
+                                                .indicator(".htmx-indicator")
+                                )
+                        )
+        );
+
+        //language=HTML
+        assertEquals("""
+                <form action="/search" method="POST">
+                  <input class="form-control" type="search" name="search" placeholder="Begin typing to search users..." hx-post="/search" hx-trigger="keyup changed delay:500ms, search" hx-target="#search-results" hx-indicator=".htmx-indicator">
+                </form>
+                """, renderedHtml);
+
+        // document
+        uiDocumentation.document("progressive-enhancement", renderedHtml);
+
+        uiDocumentation.documentSource("progressive-enhancement");
+
+    }
+
+
+}
