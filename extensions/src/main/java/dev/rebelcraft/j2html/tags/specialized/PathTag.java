@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.ext.core;
+package dev.rebelcraft.j2html.tags.specialized;
 
 import j2html.tags.ContainerTag;
 

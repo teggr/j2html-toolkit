@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.ext.aria;
+package dev.rebelcraft.j2html.attributes.aria;
 
 import j2html.attributes.Attribute;
 

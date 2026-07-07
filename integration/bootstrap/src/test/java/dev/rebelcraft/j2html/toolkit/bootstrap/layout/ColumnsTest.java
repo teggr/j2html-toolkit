@@ -6,8 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ExtendedTagCreator.comment;
 import static dev.rebelcraft.j2html.toolkit.bootstrap.DocRenderer.domContentToString;
-import static dev.rebelcraft.j2html.toolkit.ext.ExtendedTagCreator.comment;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

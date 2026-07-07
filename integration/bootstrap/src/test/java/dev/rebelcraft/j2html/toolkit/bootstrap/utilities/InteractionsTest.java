@@ -1,7 +1,7 @@
 package dev.rebelcraft.j2html.toolkit.bootstrap.utilities;
 
+import dev.rebelcraft.j2html.attributes.aria.AriaStatesAndProperties;
 import dev.rebelcraft.j2html.toolkit.bootstrap.Bootstrap;
-import dev.rebelcraft.j2html.toolkit.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uitest.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

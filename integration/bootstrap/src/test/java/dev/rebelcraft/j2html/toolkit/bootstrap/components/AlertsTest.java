@@ -1,10 +1,10 @@
 package dev.rebelcraft.j2html.toolkit.bootstrap.components;
 
 import dev.rebelcraft.html.preview.Preview;
+import dev.rebelcraft.j2html.attributes.aria.AriaRoles;
+import dev.rebelcraft.j2html.attributes.aria.AriaStatesAndProperties;
 import dev.rebelcraft.j2html.toolkit.bootstrap.Bootstrap;
 import dev.rebelcraft.j2html.toolkit.bootstrap.BootstrapIcons;
-import dev.rebelcraft.j2html.toolkit.ext.aria.AriaRoles;
-import dev.rebelcraft.j2html.toolkit.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uitest.UiDocumentation;
 import j2html.tags.DomContent;
 
@@ -12,8 +12,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ExtendedTagCreator.*;
 import static dev.rebelcraft.j2html.toolkit.bootstrap.DocRenderer.domContentToString;
-import static dev.rebelcraft.j2html.toolkit.ext.ExtendedTagCreator.*;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

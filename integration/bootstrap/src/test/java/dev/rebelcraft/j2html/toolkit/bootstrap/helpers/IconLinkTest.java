@@ -1,15 +1,15 @@
 package dev.rebelcraft.j2html.toolkit.bootstrap.helpers;
 
+import dev.rebelcraft.j2html.attributes.aria.AriaStatesAndProperties;
 import dev.rebelcraft.j2html.toolkit.bootstrap.Bootstrap;
-import dev.rebelcraft.j2html.toolkit.ext.aria.AriaStatesAndProperties;
 import dev.rebelcraft.uitest.UiDocumentation;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
+import static dev.rebelcraft.j2html.ExtendedTagCreator.svg;
+import static dev.rebelcraft.j2html.ExtendedTagCreator.use;
 import static dev.rebelcraft.j2html.toolkit.bootstrap.DocRenderer.domContentToString;
-import static dev.rebelcraft.j2html.toolkit.ext.ExtendedTagCreator.svg;
-import static dev.rebelcraft.j2html.toolkit.ext.ExtendedTagCreator.use;
 import static j2html.TagCreator.a;
 import static j2html.TagCreator.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;

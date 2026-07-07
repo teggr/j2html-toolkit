@@ -1,9 +1,9 @@
-package dev.rebelcraft.j2html.toolkit.ext;
+package dev.rebelcraft.j2html;
 
-import dev.rebelcraft.j2html.toolkit.ext.core.PathTag;
-import dev.rebelcraft.j2html.toolkit.ext.core.SvgTag;
-import dev.rebelcraft.j2html.toolkit.ext.core.SymbolTag;
-import dev.rebelcraft.j2html.toolkit.ext.core.UseTag;
+import dev.rebelcraft.j2html.tags.specialized.PathTag;
+import dev.rebelcraft.j2html.tags.specialized.SvgTag;
+import dev.rebelcraft.j2html.tags.specialized.SymbolTag;
+import dev.rebelcraft.j2html.tags.specialized.UseTag;
 import j2html.TagCreator;
 import j2html.tags.DomContent;
 import j2html.tags.UnescapedText;
