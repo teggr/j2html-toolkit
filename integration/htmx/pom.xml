@@ -20,7 +20,7 @@
 
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-toolkit-extensions</artifactId>
+            <artifactId>j2html-toolkit-essentials</artifactId>
             <version>${project.version}</version>
         </dependency>
 

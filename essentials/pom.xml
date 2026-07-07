@@ -9,8 +9,8 @@
         <version>0.0.4-SNAPSHOT</version>
     </parent>
 
-    <artifactId>j2html-toolkit-extensions</artifactId>
-    <name>j2html-toolkit-extensions</name>
+    <artifactId>j2html-toolkit-essentials</artifactId>
+    <name>j2html-toolkit-essentials</name>
 
     <dependencies>
         <dependency>
