@@ -13,7 +13,7 @@ import com.palantir.javapoet.FieldSpec;
 import com.palantir.javapoet.JavaFile;
 import com.palantir.javapoet.TypeSpec;
 
-import dev.rebelcraft.j2html.toolkit.ext.CssClassMapper;
+import dev.rebelcraft.j2html.toolkit.integration.tools.api.CssClassMapper;
 
 import javax.annotation.Nonnull;
 import javax.lang.model.element.Modifier;

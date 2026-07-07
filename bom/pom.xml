@@ -51,6 +51,11 @@
                 <artifactId>j2html-toolkit-preview</artifactId>
                 <version>${project.version}</version>
             </dependency>
+             <dependency>
+                <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-toolkit-integration-tools-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

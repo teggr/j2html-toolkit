@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.ext;
+package dev.rebelcraft.j2html.toolkit.integration.tools.api;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

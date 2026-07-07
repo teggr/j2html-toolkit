@@ -2,7 +2,7 @@ package dev.rebelcraft.j2html.toolkit.bootstrap;
 
 import java.lang.String;
 
-import dev.rebelcraft.j2html.toolkit.ext.CssClassMapper;
+import dev.rebelcraft.j2html.toolkit.integration.tools.api.CssClassMapper;
 
 public final class Bootstrap {
   @CssClassMapper(
