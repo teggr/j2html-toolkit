@@ -29,6 +29,9 @@ public class HomeView implements HtmlComponent {
             ),
             p().with(
                 a("Open Bootstrap showcase").withHref("/bootstrap")
+            ),
+            p().with(
+                a("Open HTMX showcase").withHref("/htmx")
             )
         );
 

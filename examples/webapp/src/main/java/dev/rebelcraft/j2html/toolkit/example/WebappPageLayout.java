@@ -4,6 +4,8 @@ import dev.rebelcraft.j2html.layouts.PageLayout;
 import j2html.tags.ContainerTag;
 import j2html.tags.DomContent;
 
+import java.util.List;
+
 import static j2html.TagCreator.a;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.nav;
@@ -11,6 +13,10 @@ import static j2html.TagCreator.nav;
 public class WebappPageLayout {
 
     public DomContent layout(String title, DomContent body) {
+                return layout(title, body, List.of());
+        }
+
+        public DomContent layout(String title, DomContent body, List<String> extraScripts) {
         ContainerTag<?> navbar = nav().withClasses("navbar", "navbar-expand-lg", "navbar-light", "bg-white", "border-bottom")
                 .with(
                         div().withClasses("container").with(
@@ -20,12 +26,13 @@ public class WebappPageLayout {
                                         a("AI").withHref("/ai").withClasses("nav-link"),
                                         a("Streaming").withHref("/ai/stream").withClasses("nav-link"),
                                         a("Health").withHref("/ai/health").withClasses("nav-link"),
-                                        a("Bootstrap").withHref("/bootstrap").withClasses("nav-link")
+                                        a("Bootstrap").withHref("/bootstrap").withClasses("nav-link"),
+                                        a("HTMX").withHref("/htmx").withClasses("nav-link")
                                 )
                         )
                 );
 
-        WebappPageLayoutConfigurer configurer = new WebappPageLayoutConfigurer(title);
+        WebappPageLayoutConfigurer configurer = new WebappPageLayoutConfigurer(title, extraScripts);
         return new PageLayout().layout(
                 title,
                 body,
