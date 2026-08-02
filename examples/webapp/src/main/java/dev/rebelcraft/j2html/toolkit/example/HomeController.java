@@ -13,4 +13,24 @@ public class HomeController {
         return "home-view";
     }
 
+    @GetMapping("/ai")
+    public String aiShowcase() {
+        return "ai-showcase-view";
+    }
+
+    @GetMapping("/ai/stream")
+    public String aiStreamingShowcase() {
+        return "ai-streaming-showcase-view";
+    }
+
+    @GetMapping("/ai/health")
+    public String aiSessionHealthShowcase() {
+        return "ai-session-health-showcase-view";
+    }
+
+    @GetMapping("/bootstrap")
+    public String bootstrapShowcase() {
+        return "bootstrap-showcase-view";
+    }
+
 }

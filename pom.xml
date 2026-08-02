@@ -28,6 +28,7 @@
     <modules>
         <module>preview</module>
         <module>essentials</module>
+        <module>components</module>
         <module>template-engine</module>
         <module>integration</module>
         <module>spring</module>

@@ -18,6 +18,11 @@
         <dependencies>
             <dependency>
                 <groupId>dev.rebelcraft</groupId>
+                <artifactId>j2html-toolkit-components-ai</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.rebelcraft</groupId>
                 <artifactId>j2html-toolkit-essentials</artifactId>
                 <version>${project.version}</version>
             </dependency>

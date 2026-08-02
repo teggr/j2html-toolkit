@@ -7,6 +7,7 @@ import j2html.tags.DomContent;
 
 import org.springframework.stereotype.Component;
 
+import static j2html.TagCreator.a;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.p;
 
@@ -15,11 +16,23 @@ public class HomeView implements HtmlComponent {
 
     @Override
     public DomContent render(RenderContext ctx) {
-
-        return div().withClasses(Bootstrap.container).with(
-                p("Hello World")
+        DomContent body = div().withClasses(Bootstrap.container).with(
+            p("Hello World"),
+            p().with(
+                a("Open AI showcase").withHref("/ai")
+            ),
+            p().with(
+                a("Open AI streaming showcase").withHref("/ai/stream")
+            ),
+            p().with(
+                a("Open AI session health showcase").withHref("/ai/health")
+            ),
+            p().with(
+                a("Open Bootstrap showcase").withHref("/bootstrap")
+            )
         );
 
+        return new WebappPageLayout().layout("Home", body);
     }
 
 }
