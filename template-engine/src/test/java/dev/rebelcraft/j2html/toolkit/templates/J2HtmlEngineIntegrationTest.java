@@ -26,7 +26,7 @@ class J2HtmlEngineIntegrationTest {
     @Test
     void resolvesNamingStrategyWhenAnnotationNameIsAbsent() {
         J2HtmlEngine engine = J2HtmlEngine.builder()
-                .namingStrategy(ComponentNamingStrategy.defaultStrategy("sh.rebelstack.j2html.engine", "Component"))
+                .namingStrategy(ComponentNamingStrategy.defaultStrategy("dev.rebelcraft.j2html.toolkit", "Component"))
                 .register("ignored", NamedByAnnotation.class)
                 .build();
 

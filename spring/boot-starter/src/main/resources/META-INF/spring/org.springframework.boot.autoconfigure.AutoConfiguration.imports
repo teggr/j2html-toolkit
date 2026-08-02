@@ -1,1 +1,1 @@
-sh.rebelstack.j2html.engine.spring.boot.J2HtmlEngineAutoConfiguration
+dev.rebelcraft.j2html.toolkit.spring.boot.J2HtmlEngineAutoConfiguration

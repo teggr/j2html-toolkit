@@ -20,7 +20,7 @@ class J2HtmlEngineAutoConfigurationTest {
 
     private final WebApplicationContextRunner contextRunner = new WebApplicationContextRunner()
             .withConfiguration(AutoConfigurations.of(J2HtmlEngineAutoConfiguration.class))
-            .withPropertyValues("j2html.base-packages=sh.rebelstack.j2html.engine.spring.boot");
+            .withPropertyValues("j2html.base-packages=dev.rebelcraft.j2html.toolkit.spring.boot");
 
     @Test
     void createsEngineAndViewResolverBeans() {
