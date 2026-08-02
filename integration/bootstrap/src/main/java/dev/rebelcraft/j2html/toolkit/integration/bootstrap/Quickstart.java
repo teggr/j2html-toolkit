@@ -1,8 +1,8 @@
-package dev.rebelcraft.j2html.toolkit.bootstrap;
+package dev.rebelcraft.j2html.toolkit.integration.bootstrap;
 
 import j2html.tags.specialized.HtmlTag;
 
-import static dev.rebelcraft.j2html.toolkit.bootstrap.BootstrapTagCreator.*;
+import static dev.rebelcraft.j2html.toolkit.integration.bootstrap.BootstrapTagCreator.*;
 import static j2html.TagCreator.*;
 
 import dev.rebelcraft.j2html.ExtendedTagCreator;

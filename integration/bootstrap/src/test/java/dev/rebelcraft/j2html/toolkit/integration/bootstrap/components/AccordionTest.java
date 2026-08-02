@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.bootstrap.components;
+package dev.rebelcraft.j2html.toolkit.integration.bootstrap.components;
 
 import org.junit.jupiter.api.Test;
 

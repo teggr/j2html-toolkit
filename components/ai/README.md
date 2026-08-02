@@ -25,12 +25,12 @@ Reusable, style-agnostic j2html components for AI chat and agent-style user inte
 ## Example
 
 ```java
-import dev.rebelcraft.j2html.toolkit.ai.AiChatLayouts;
-import dev.rebelcraft.j2html.toolkit.ai.AgentWorkspaceModel;
-import dev.rebelcraft.j2html.toolkit.ai.NotificationMessage;
-import dev.rebelcraft.j2html.toolkit.ai.NotificationTone;
-import dev.rebelcraft.j2html.toolkit.ai.SelectOption;
-import dev.rebelcraft.j2html.toolkit.ai.TranscriptMessage;
+import dev.rebelcraft.j2html.toolkit.components.ai.AiChatLayouts;
+import dev.rebelcraft.j2html.toolkit.components.ai.AgentWorkspaceModel;
+import dev.rebelcraft.j2html.toolkit.components.ai.NotificationMessage;
+import dev.rebelcraft.j2html.toolkit.components.ai.NotificationTone;
+import dev.rebelcraft.j2html.toolkit.components.ai.SelectOption;
+import dev.rebelcraft.j2html.toolkit.components.ai.TranscriptMessage;
 
 import java.util.List;
 
@@ -51,8 +51,8 @@ String html = AiChatLayouts.agentWorkspace(model).render();
 Streaming and tool timeline layout:
 
 ```java
-import dev.rebelcraft.j2html.toolkit.ai.StreamingToken;
-import dev.rebelcraft.j2html.toolkit.ai.ToolCallEvent;
+import dev.rebelcraft.j2html.toolkit.components.ai.StreamingToken;
+import dev.rebelcraft.j2html.toolkit.components.ai.ToolCallEvent;
 
 String html = AiChatLayouts.streamingWorkspace(
     model,

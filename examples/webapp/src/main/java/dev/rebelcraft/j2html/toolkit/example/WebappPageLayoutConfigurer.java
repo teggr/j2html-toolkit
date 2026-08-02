@@ -2,7 +2,7 @@ package dev.rebelcraft.j2html.toolkit.example;
 
 import dev.rebelcraft.j2html.layouts.PageLayoutBodyConfigurer;
 import dev.rebelcraft.j2html.layouts.PageLayoutHeadConfigurer;
-import dev.rebelcraft.j2html.toolkit.bootstrap.BootstrapConfig;
+import dev.rebelcraft.j2html.toolkit.integration.bootstrap.BootstrapConfig;
 
 import java.util.List;
 

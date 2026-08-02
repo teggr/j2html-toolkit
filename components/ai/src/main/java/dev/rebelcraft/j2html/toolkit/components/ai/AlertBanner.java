@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.ai;
+package dev.rebelcraft.j2html.toolkit.components.ai;
 
 public record AlertBanner(String tone, String title, String detail) {
     public AlertBanner {

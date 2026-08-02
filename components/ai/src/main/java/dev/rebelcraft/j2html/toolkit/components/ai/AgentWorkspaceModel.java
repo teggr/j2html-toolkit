@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.ai;
+package dev.rebelcraft.j2html.toolkit.components.ai;
 
 import java.util.List;
 

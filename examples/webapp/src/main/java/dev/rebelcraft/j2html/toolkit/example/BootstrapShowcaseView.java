@@ -1,7 +1,6 @@
 package dev.rebelcraft.j2html.toolkit.example;
 
-import dev.rebelcraft.j2html.layouts.PageLayout;
-import dev.rebelcraft.j2html.toolkit.bootstrap.Bootstrap;
+import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
 import dev.rebelcraft.j2html.toolkit.templates.HtmlComponent;
 import dev.rebelcraft.j2html.toolkit.templates.RenderContext;
 import j2html.tags.DomContent;

@@ -1,11 +1,11 @@
-package dev.rebelcraft.j2html.toolkit.bootstrap;
+package dev.rebelcraft.j2html.toolkit.integration.bootstrap;
 
 import j2html.attributes.Attr;
 import j2html.tags.specialized.LinkTag;
 import j2html.tags.specialized.MetaTag;
 import j2html.tags.specialized.ScriptTag;
 
-import static dev.rebelcraft.j2html.toolkit.bootstrap.BootstrapConfig.*;
+import static dev.rebelcraft.j2html.toolkit.integration.bootstrap.BootstrapConfig.*;
 import static j2html.TagCreator.*;
 
 public class BootstrapTagCreator {

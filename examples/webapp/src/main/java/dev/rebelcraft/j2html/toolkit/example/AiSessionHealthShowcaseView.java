@@ -1,12 +1,11 @@
 package dev.rebelcraft.j2html.toolkit.example;
 
-import dev.rebelcraft.j2html.layouts.PageLayout;
-import dev.rebelcraft.j2html.toolkit.ai.AiChatLayouts;
-import dev.rebelcraft.j2html.toolkit.ai.AlertBanner;
-import dev.rebelcraft.j2html.toolkit.ai.Checkpoint;
-import dev.rebelcraft.j2html.toolkit.ai.SessionHealthModel;
-import dev.rebelcraft.j2html.toolkit.ai.SignalBadge;
-import dev.rebelcraft.j2html.toolkit.bootstrap.Bootstrap;
+import dev.rebelcraft.j2html.toolkit.components.ai.AiChatLayouts;
+import dev.rebelcraft.j2html.toolkit.components.ai.AlertBanner;
+import dev.rebelcraft.j2html.toolkit.components.ai.Checkpoint;
+import dev.rebelcraft.j2html.toolkit.components.ai.SessionHealthModel;
+import dev.rebelcraft.j2html.toolkit.components.ai.SignalBadge;
+import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
 import dev.rebelcraft.j2html.toolkit.templates.HtmlComponent;
 import dev.rebelcraft.j2html.toolkit.templates.RenderContext;
 import j2html.tags.DomContent;

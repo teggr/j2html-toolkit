@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.bootstrap;
+package dev.rebelcraft.j2html.toolkit.integration.bootstrap;
 
 import java.io.IOException;
 import java.util.Collections;

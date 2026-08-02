@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.bootstrap.forms;
+package dev.rebelcraft.j2html.toolkit.integration.bootstrap.forms;
 
 public class Validation {
 

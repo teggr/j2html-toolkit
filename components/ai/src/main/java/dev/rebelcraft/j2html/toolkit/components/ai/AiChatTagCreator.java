@@ -1,4 +1,4 @@
-package dev.rebelcraft.j2html.toolkit.ai;
+package dev.rebelcraft.j2html.toolkit.components.ai;
 
 import j2html.tags.ContainerTag;
 import j2html.tags.specialized.DivTag;

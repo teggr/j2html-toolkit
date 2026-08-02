@@ -1,6 +1,6 @@
-package dev.rebelcraft.j2html.toolkit.bootstrap.content;
+package dev.rebelcraft.j2html.toolkit.integration.bootstrap.content;
 
-import dev.rebelcraft.j2html.toolkit.bootstrap.Bootstrap;
+import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
 import dev.rebelcraft.uitest.UiDocumentation;
 import j2html.tags.specialized.TbodyTag;
 import j2html.tags.specialized.TheadTag;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
-import static dev.rebelcraft.j2html.toolkit.bootstrap.DocRenderer.domContentToString;
+import static dev.rebelcraft.j2html.toolkit.integration.bootstrap.DocRenderer.domContentToString;
 import static j2html.TagCreator.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
