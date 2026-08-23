@@ -27,10 +27,12 @@
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>java-html-toolkit-test-docs</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>java-html-toolkit-preview</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
