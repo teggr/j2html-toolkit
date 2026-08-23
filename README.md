@@ -53,6 +53,8 @@ Add the following to your Maven `pom.xml` file.
 
 ```
 
+You don't need all of these modules - pick only the ones relevant to your project (e.g., just `htmx-j2html-extension` if you're not using Spring).
+
 Use the provided `J2HtmlView` objects to start building out your webmvc application.
 
 ```java
