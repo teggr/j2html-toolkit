@@ -13,11 +13,6 @@
     <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
     <name>j2html-toolkit-integration-bootstrap</name>
 
-    <properties>
-        <!-- aligned with the boostrap version -->
-        <bootstrap.version>5.3.3</bootstrap.version>
-    </properties>
-
     <dependencies>
 
         <dependency>

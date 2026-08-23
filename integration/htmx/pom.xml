@@ -12,10 +12,6 @@
     <artifactId>j2html-toolkit-integration-htmx</artifactId>
     <name>j2html-toolkit-integration-htmx</name>
 
-    <properties>
-        <htmx.version>2.0.0</htmx.version>
-    </properties>
-
     <dependencies>
 
         <dependency>
