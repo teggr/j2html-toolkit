@@ -1,6 +1,6 @@
-# bootstrap-j2html-extension
+# j2html-toolkit-integration-bootstrap
 
-This module now lives under `integrations/bootstrap` in the Maven reactor.
+This module now lives under `integration/bootstrap` in the Maven reactor.
 
 This brings the [Bootstrap](https://getbootstrap.com/) UI kit into the j2html ecosystem.
 
@@ -12,15 +12,14 @@ This brings the [Bootstrap](https://getbootstrap.com/) UI kit into the j2html ec
 ```xml
 <dependency>
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>bootstrap-j2html-extension</artifactId>
-    <version>0.0.3</version>
+    <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
 </dependency>
 ```
 
 Usage:
 ```java
-import dev.rebelcraft.j2html.bootstrap.Bootstrap;
-import dev.rebelcraft.j2html.ext.aria.AriaRoles;
+import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
+import dev.rebelcraft.j2html.attributes.aria.AriaRoles;
 import static j2html.TagCreator.*;
 
 div()

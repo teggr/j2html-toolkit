@@ -7,7 +7,7 @@ A proof of concept UI testing framework based on [Spring MockMvc](https://docs.s
 * Generates snippets of code for integrating with documentation tools
 
 ```java
-  import dev.rebelcraft.j2html.bootstrap.Bootstrap;
+  import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
   import dev.rebelcraft.uitest.UiDocumentation;
   import org.junit.jupiter.api.BeforeEach;
   import org.junit.jupiter.api.Test;

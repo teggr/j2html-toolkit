@@ -1,6 +1,6 @@
 # j2html-toolkit-components-ai
 
-Reusable, style-agnostic j2html components for AI chat and agent-style user interfaces.
+Reusable, Bootstrap-compatible j2html components for AI chat and agent-style user interfaces.
 
 ## Component groups
 
@@ -12,6 +12,10 @@ Reusable, style-agnostic j2html components for AI chat and agent-style user inte
 - notifications/toasts for status and errors
 - streaming response chunks for token-by-token output
 - tool-call timeline blocks for SDK-style trace visibility
+
+## Styling
+
+The components emit [Bootstrap](https://getbootstrap.com/) CSS classes (for example `card`, `list-group`, `form-control`, `alert`) but ship no CSS of their own. Bootstrap is an assumed peer dependency: load it yourself (CDN or Webjars — see `BootstrapConfig` in the `j2html-toolkit-integration-bootstrap` module) or provide equivalent styles for those class names. Without a stylesheet the components render unstyled.
 
 ## Add dependency
 

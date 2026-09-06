@@ -4,16 +4,15 @@ A copied-in template engine module that now builds and releases from this reposi
 
 ## Artifacts
 
-* `dev.rebelcraft:j2html-engine-core`
-* `dev.rebelcraft:j2html-engine-spring`
-* `dev.rebelcraft:j2html-engine-spring-boot-starter`
+* `dev.rebelcraft:j2html-toolkit-template-engine`
+* `dev.rebelcraft:j2html-toolkit-spring-template-engine`
+* `dev.rebelcraft:j2html-toolkit-spring-boot-starter`
 
 Module locations in this repository:
 
-* `j2html-template-engine/j2html-engine-core`
-* `spring/j2html-engine-spring`
-* `spring/j2html-engine-spring-boot-starter`
-* `spring/j2html-extensions-spring-boot-starter`
-* `spring/j2html-example-webapp`
+* `template-engine`
+* `spring/template-engine`
+* `spring/boot-starter`
+* `examples/webapp`
 
-See [/j2html-template-engine/README.md](/j2html-template-engine/README.md) for usage and [/j2html-template-engine/docs/template-examples.md](/j2html-template-engine/docs/template-examples.md) for template examples.
+See [/template-engine/README.md](/template-engine/README.md) for usage and [/template-engine/docs/template-examples.md](/template-engine/docs/template-examples.md) for template examples.

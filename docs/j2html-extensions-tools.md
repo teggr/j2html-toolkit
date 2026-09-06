@@ -1,4 +1,4 @@
-# j2html-extensions-tools
+# j2html-toolkit-integration-tools
 
 Support for generating Java classes containing the CSS class names from published CSS libraries.
 
@@ -11,10 +11,10 @@ Support for generating Java classes containing the CSS class names from publishe
     <artifactId>exec-maven-plugin</artifactId>
     <version>3.1.0</version>
     <configuration>
-        <mainClass>dev.rebelcraft.j2html.tools.ExtractCssClassesToJava</mainClass>
+        <mainClass>dev.rebelcraft.j2html.toolkit.integration.tools.ExtractCssClassesToJava</mainClass>
         <arguments>
             <argument>${project.basedir}\src\bootstrap\css\bootstrap.css</argument>
-            <argument>dev.rebelcraft.j2html.bootstrap</argument>
+            <argument>dev.rebelcraft.j2html.toolkit.integration.bootstrap</argument>
             <argument>Bootstrap</argument>
             <argument>${project.basedir}\src\main\java</argument>
         </arguments>
@@ -23,7 +23,7 @@ Support for generating Java classes containing the CSS class names from publishe
     <dependencies>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions-tools</artifactId>
+            <artifactId>j2html-toolkit-integration-tools-plugin</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

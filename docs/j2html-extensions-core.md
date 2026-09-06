@@ -6,7 +6,7 @@ Support for some missing tags: `PathTag`, `SvgTag`, `SymbolTag`, `UseTag`. The `
 ExtendedTagCreator.svg();
 ExtendedTagCreator.path();
 ExtendedTagCreator.use();
-ExtendedTagCreator.symbok();
+ExtendedTagCreator.symbol();
 ```
 
 Support for [Aria Roles, States and Properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
