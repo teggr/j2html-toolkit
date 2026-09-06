@@ -6,16 +6,16 @@ A collection of extensions for the [j2html](https://j2html.com) library, used fo
 
 # What's in the box?
 
-* [j2html-extensions-core](/docs/j2html-extensions-core.md) - Extensions for the core j2html classes and creators
-* [j2html-extensions-tools](/docs/j2html-extensions-tools.md) - Standalone module with utilities for generating code
+* [essentials](/docs/j2html-extensions-core.md) - Extensions for the core j2html classes and creators
+* [integration/tools](/docs/j2html-extensions-tools.md) - Standalone module with utilities for generating code
 * [rebel-ui-test](/docs/rebel-ui-test.md) - Standalone module for testing UI rendering
-* [ai components](/components/ai/README.md) - Reusable style-agnostic j2html components for AI chat and agent-style UIs
-* [integrations/bootstrap](/docs/bootstrap-j2html-extension.md) - Bootstrap lib
-* [integrations/htmx](/docs/htmx-j2html-extension.md) - HTMX attributes
-* [spring/j2html-extensions-spring-boot-starter](/docs/j2html-template-engine.md) - Spring starter modules and example app
-* [j2html-template-engine](/docs/j2html-template-engine.md) - Template engine and Spring integrations for j2html
+* [ai components](/components/ai/README.md) - Reusable Bootstrap-compatible j2html components for AI chat and agent-style UIs
+* [integration/bootstrap](/docs/bootstrap-j2html-extension.md) - Bootstrap lib
+* [integration/htmx](/docs/htmx-j2html-extension.md) - HTMX attributes
+* [spring/boot-starter](/docs/j2html-template-engine.md) - Spring Boot starter for the template engine
+* [template-engine](/docs/j2html-template-engine.md) - Template engine and Spring integrations for j2html
 
-The browser-focused integration modules now live under `integrations/` in the Maven reactor.
+The browser-focused integration modules now live under `integration/` in the Maven reactor.
 Spring-focused modules now live under `spring/` in the Maven reactor.
 
 # Quick Start
@@ -28,8 +28,8 @@ Add the following to your Maven `pom.xml` file.
     <dependencies>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
-            <artifactId>j2html-extensions-bom</artifactId>
-            <version>0.0.3</version>
+            <artifactId>j2html-toolkit-bom</artifactId>
+            <version>0.0.4-SNAPSHOT</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -40,20 +40,20 @@ Add the following to your Maven `pom.xml` file.
 
 <dependency>
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>j2html-extensions-spring-boot-starter</artifactId>
+    <artifactId>j2html-toolkit-spring-boot-starter</artifactId>
 </dependency>
 <dependency>
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>bootstrap-j2html-extension</artifactId>
+    <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
 </dependency>
 <dependency>
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>htmx-j2html-extension</artifactId>
+    <artifactId>j2html-toolkit-integration-htmx</artifactId>
 </dependency>
 
 ```
 
-Use the provided `J2HtmlView` objects to start building out your webmvc application.
+With the Spring Boot starter on the classpath, views are Spring beans that implement `HtmlComponent`. The starter auto-configures a `J2HtmlEngine` (scanning your application's packages for components) and a `J2HtmlViewResolver`, so a controller just returns the component's view name — derived from the class name in kebab-case, or set explicitly with `@HtmlTemplate("...")`.
 
 ```java
 
@@ -63,7 +63,7 @@ public class HomeController {
 
     @GetMapping
     public String home() {
-        return "homeView";
+        return "home"; // resolves the HomeView component below
     }
 
 }
@@ -71,13 +71,11 @@ public class HomeController {
 ...
 
 @Component
-public class HomeView extends J2HtmlView {
+@HtmlTemplate("home")
+public class HomeView implements HtmlComponent {
 
     @Override
-    protected DomContent renderMergedOutputModelDomContent(
-            Map<String, Object> model,
-            HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+    public DomContent render(RenderContext ctx) {
 
         return div().withClasses(Bootstrap.container).with(
                 p("Hello World")
@@ -88,6 +86,8 @@ public class HomeView extends J2HtmlView {
 }
 
 ```
+
+See the [examples webapp](/examples/webapp) for a complete working application, and the [template engine docs](/docs/j2html-template-engine.md) for engine configuration options such as `j2html.base-packages`.
 
 
 # Build and release

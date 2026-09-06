@@ -1,6 +1,6 @@
-# htmx-j2html-extension
+# j2html-toolkit-integration-htmx
 
-This module now lives under `integrations/htmx` in the Maven reactor.
+This module now lives under `integration/htmx` in the Maven reactor.
 
 This brings the [HTMX](https://htmx.org/) tools for HTML into the j2html ecosystem.
 
@@ -10,15 +10,14 @@ This brings the [HTMX](https://htmx.org/) tools for HTML into the j2html ecosyst
 ```xml
 <dependency>
     <groupId>dev.rebelcraft</groupId>
-    <artifactId>htmx-j2html-extension</artifactId>
-    <version>0.0.3</version>
+    <artifactId>j2html-toolkit-integration-htmx</artifactId>
 </dependency>
 ```
 
 Usage:
 ```java
-import static dev.rebelcraft.j2html.htmx.HtmxAttributes.*;
-import static dev.rebelcraft.j2html.htmx.Htmx.*;
+import static dev.rebelcraft.j2html.toolkit.integration.htmx.HtmxAttributes.*;
+import static dev.rebelcraft.j2html.toolkit.integration.htmx.Htmx.*;
 import static j2html.TagCreator.*;
 
 // add as attributes

@@ -3,20 +3,19 @@ A template engine for the j2html library.
 
 Repository module locations:
 
-- Core engine module: `j2html-template-engine/j2html-engine-core`
-- Spring modules: `spring/j2html-engine-spring` and `spring/j2html-engine-spring-boot-starter`
+- Core engine module: `template-engine`
+- Spring modules: `spring/template-engine` and `spring/boot-starter`
 
 ## Install
 
-Use the artifact that matches your stack:
+Use the artifact that matches your stack (versions are managed by the `j2html-toolkit-bom`):
 
 ### Core engine
 
 ```xml
 <dependency>
   <groupId>dev.rebelcraft</groupId>
-  <artifactId>j2html-engine-core</artifactId>
-  <version>${j2html-engine.version}</version>
+  <artifactId>j2html-toolkit-template-engine</artifactId>
 </dependency>
 ```
 
@@ -25,8 +24,7 @@ Use the artifact that matches your stack:
 ```xml
 <dependency>
   <groupId>dev.rebelcraft</groupId>
-  <artifactId>j2html-engine-spring</artifactId>
-  <version>${j2html-engine.version}</version>
+  <artifactId>j2html-toolkit-spring-template-engine</artifactId>
 </dependency>
 ```
 
@@ -35,17 +33,16 @@ Use the artifact that matches your stack:
 ```xml
 <dependency>
   <groupId>dev.rebelcraft</groupId>
-  <artifactId>j2html-engine-spring-boot-starter</artifactId>
-  <version>${j2html-engine.version}</version>
+  <artifactId>j2html-toolkit-spring-boot-starter</artifactId>
 </dependency>
 ```
 
 ## Quick start (core template engine)
 
 ```java
-import dev.rebelcraft.engine.HtmlComponent;
-import dev.rebelcraft.engine.J2HtmlEngine;
-import dev.rebelcraft.engine.RenderContext;
+import dev.rebelcraft.j2html.toolkit.templates.HtmlComponent;
+import dev.rebelcraft.j2html.toolkit.templates.J2HtmlEngine;
+import dev.rebelcraft.j2html.toolkit.templates.RenderContext;
 import j2html.tags.DomContent;
 
 import static j2html.TagCreator.div;
@@ -123,15 +120,15 @@ The engine now emits useful SLF4J logs for:
 Recommended Spring Boot logging levels:
 
 ```properties
-logging.level.dev.rebelcraft.engine=DEBUG
-logging.level.dev.rebelcraft.engine.spring=DEBUG
-logging.level.dev.rebelcraft.engine.spring.boot=INFO
+logging.level.dev.rebelcraft.j2html.toolkit.templates=DEBUG
+logging.level.dev.rebelcraft.j2html.toolkit.spring.templates=DEBUG
+logging.level.dev.rebelcraft.j2html.toolkit.spring.boot=INFO
 ```
 
 For deep cache diagnostics (template descriptor cache hit/miss), enable:
 
 ```properties
-logging.level.dev.rebelcraft.engine=TRACE
+logging.level.dev.rebelcraft.j2html.toolkit.templates=TRACE
 ```
 
 ## Known limitation
