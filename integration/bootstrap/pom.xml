@@ -13,11 +13,6 @@
     <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
     <name>j2html-toolkit-integration-bootstrap</name>
 
-    <properties>
-        <!-- aligned with the boostrap version -->
-        <bootstrap.version>5.3.3</bootstrap.version>
-    </properties>
-
     <dependencies>
 
         <dependency>
@@ -35,10 +30,12 @@
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>java-html-toolkit-test-docs</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>dev.rebelcraft</groupId>
             <artifactId>java-html-toolkit-preview</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
@@ -54,17 +51,17 @@
                 <configuration>
                     <mainClass>dev.rebelcraft.j2html.tools.ExtractCssClassesToJava</mainClass>
                     <arguments>
-                        <argument>${project.basedir}\src\bootstrap\css\bootstrap.css</argument>
+                        <argument>${project.basedir}/src/bootstrap/css/bootstrap.css</argument>
                         <argument>dev.rebelcraft.j2html.bootstrap</argument>
                         <argument>Bootstrap</argument>
-                        <argument>${project.basedir}\src\main\java</argument>
+                        <argument>${project.basedir}/src/main/java</argument>
                     </arguments>
                     <includePluginDependencies>true</includePluginDependencies>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>dev.rebelcraft</groupId>
-                        <artifactId>j2html-integration-tools</artifactId>
+                        <artifactId>j2html-toolkit-integration-tools-plugin</artifactId>
                         <version>${project.version}</version>
                     </dependency>
                     <dependency>

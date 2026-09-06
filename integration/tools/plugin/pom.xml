@@ -24,13 +24,11 @@
         <dependency>
             <groupId>com.helger</groupId>
             <artifactId>ph-css</artifactId>
-            <version>7.0.3</version>
         </dependency>
 
         <dependency>
             <groupId>com.palantir.javapoet</groupId>
             <artifactId>javapoet</artifactId>
-            <version>0.6.0</version>
         </dependency>
 
     </dependencies>
