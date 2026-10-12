@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>j2html-toolkit-template-engine</artifactId>
+    <name>j2html-toolkit-template-engine</name>
 
     <dependencies>
         <dependency>
