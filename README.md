@@ -89,6 +89,15 @@ public class HomeView implements HtmlComponent {
 
 See the [examples webapp](/examples/webapp) for a complete working application, and the [template engine docs](/docs/j2html-template-engine.md) for engine configuration options such as `j2html.base-packages`.
 
+## Integration smoke test
+
+The examples webapp is the end-to-end integration surface for Spring Boot, j2html, HTMX, and Bootstrap. Its HTTP smoke test starts the application and checks the rendered pages:
+
+```bash
+./mvnw --no-transfer-progress -pl examples/webapp -am test
+```
+
+The project targets Java 17 or newer, uses j2html 1.6.0, and currently manages Spring Boot 4.0.7 through the `spring.boot.version` property in the root POM.
 
 # Build and release
 
