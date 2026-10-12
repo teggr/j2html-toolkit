@@ -29,7 +29,7 @@ Add the following to your Maven `pom.xml` file.
         <dependency>
             <groupId>io.github.teggr</groupId>
             <artifactId>j2html-toolkit-bom</artifactId>
-            <version>0.0.4-SNAPSHOT</version>
+            <version>0.0.5</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>

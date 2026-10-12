@@ -2,6 +2,8 @@
 
 Releases are started manually from GitHub Actions. The workflow publishes the snapshot version as a release, creates a matching GitHub Release, then advances the selected branch to the next patch snapshot.
 
+The current development version of the toolkit is `0.0.6-SNAPSHOT`, as declared by the root POM. Consumer examples use the latest published release instead.
+
 ## Configure repository secrets
 
 Add these actions secrets under **Settings > Secrets and variables > Actions**:
@@ -20,11 +22,11 @@ The workflow needs `contents: write` permission to create the GitHub Release and
 
 ## Publish a release
 
-1. Ensure the branch to release has a root POM version ending in `-SNAPSHOT`, for example `0.0.4-SNAPSHOT`.
+1. Ensure the branch to release has a root POM version ending in `-SNAPSHOT`.
 2. Open **Actions > Publish release > Run workflow**, select the branch, and run it.
-3. The workflow removes `-SNAPSHOT` from the current version and deploys the artifacts with the `central` Maven profile. It runs the Maven Central POM checker before deployment, automatically publishes a valid deployment, and waits for Maven Central publication to complete.
+3. The workflow removes `-SNAPSHOT` from the current version and deploys the artifacts with the `central` Maven profile, excluding the `examples` and `examples/webapp` reactor modules. It runs the Maven Central POM checker before deployment, automatically publishes a valid deployment, and waits for Maven Central publication to complete.
 4. After a successful Maven Central deployment, the workflow creates a GitHub Release tagged with that release version and GitHub-generated release notes.
-5. The workflow advances the POM versions to the next patch snapshot (for example, `0.0.4-SNAPSHOT` to `0.0.5-SNAPSHOT`) and commits/pushes that change to the selected branch.
+5. The workflow advances the POM versions to the next patch snapshot, updates consumer examples to the published release version and the development version here to the new snapshot, then commits/pushes the POM and documentation changes to the selected branch.
 
 The workflow does not create a GitHub Release or push a version change if Maven Central deployment fails. If the release already exists for the same source commit, a rerun reuses it so the snapshot-version commit can be retried.
 
