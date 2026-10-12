@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.teggr</groupId>
         <artifactId>j2html-toolkit</artifactId>
-        <version>0.0.5-SNAPSHOT</version>
+        <version>0.0.6-SNAPSHOT</version>
     </parent>
 
     <artifactId>j2html-toolkit-spring</artifactId>
