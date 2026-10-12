@@ -2,7 +2,7 @@
 
 A collection of extensions for the [j2html](https://j2html.com) library, used for building HTML with java code.
 
-![Maven Central Version](https://img.shields.io/maven-central/v/dev.rebelcraft/j2html-toolkit)
+![Maven Central Version](https://img.shields.io/maven-central/v/io.github.teggr/j2html-toolkit)
 
 # What's in the box?
 
@@ -27,7 +27,7 @@ Add the following to your Maven `pom.xml` file.
 <dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>dev.rebelcraft</groupId>
+            <groupId>io.github.teggr</groupId>
             <artifactId>j2html-toolkit-bom</artifactId>
             <version>0.0.4-SNAPSHOT</version>
             <type>pom</type>
@@ -39,15 +39,15 @@ Add the following to your Maven `pom.xml` file.
 ...
 
 <dependency>
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit-spring-boot-starter</artifactId>
 </dependency>
 <dependency>
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
 </dependency>
 <dependency>
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit-integration-htmx</artifactId>
 </dependency>
 
@@ -92,7 +92,7 @@ See the [examples webapp](/examples/webapp) for a complete working application, 
 
 # Build and release
 
-JDK 21 or newer is required to build and test this repository.
+JDK 17 or newer is required to build and test this repository.
 
 ```bash
 ./mvnw --no-transfer-progress test

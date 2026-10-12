@@ -9,7 +9,7 @@ This brings the [HTMX](https://htmx.org/) tools for HTML into the j2html ecosyst
 
 ```xml
 <dependency>
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit-integration-htmx</artifactId>
 </dependency>
 ```

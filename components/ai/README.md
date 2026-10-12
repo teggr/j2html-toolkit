@@ -21,7 +21,7 @@ The components emit [Bootstrap](https://getbootstrap.com/) CSS classes (for exam
 
 ```xml
 <dependency>
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit-components-ai</artifactId>
 </dependency>
 ```

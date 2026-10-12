@@ -4,9 +4,9 @@ A copied-in template engine module that now builds and releases from this reposi
 
 ## Artifacts
 
-* `dev.rebelcraft:j2html-toolkit-template-engine`
-* `dev.rebelcraft:j2html-toolkit-spring-template-engine`
-* `dev.rebelcraft:j2html-toolkit-spring-boot-starter`
+* `io.github.teggr:j2html-toolkit-template-engine`
+* `io.github.teggr:j2html-toolkit-spring-template-engine`
+* `io.github.teggr:j2html-toolkit-spring-boot-starter`
 
 Module locations in this repository:
 

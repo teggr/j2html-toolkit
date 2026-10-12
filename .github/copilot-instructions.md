@@ -12,7 +12,7 @@ This repository is a Java toolkit for extending and integrating the j2html libra
 - Provide reusable component toolkits for common use cases, including AI-related UI components.
 
 ## Baseline and dependencies
-- Target Java baseline: Java 21.
+- Target Java baseline: Java 17.
 - Target j2html baseline: 1.6.0.
 - Prefer idiomatic, modular Java code that fits the existing multi-module Maven structure.
 

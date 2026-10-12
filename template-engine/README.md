@@ -14,7 +14,7 @@ Use the artifact that matches your stack (versions are managed by the `j2html-to
 
 ```xml
 <dependency>
-  <groupId>dev.rebelcraft</groupId>
+  <groupId>io.github.teggr</groupId>
   <artifactId>j2html-toolkit-template-engine</artifactId>
 </dependency>
 ```
@@ -23,7 +23,7 @@ Use the artifact that matches your stack (versions are managed by the `j2html-to
 
 ```xml
 <dependency>
-  <groupId>dev.rebelcraft</groupId>
+  <groupId>io.github.teggr</groupId>
   <artifactId>j2html-toolkit-spring-template-engine</artifactId>
 </dependency>
 ```
@@ -32,7 +32,7 @@ Use the artifact that matches your stack (versions are managed by the `j2html-to
 
 ```xml
 <dependency>
-  <groupId>dev.rebelcraft</groupId>
+  <groupId>io.github.teggr</groupId>
   <artifactId>j2html-toolkit-spring-boot-starter</artifactId>
 </dependency>
 ```
