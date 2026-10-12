@@ -40,9 +40,9 @@ Use the artifact that matches your stack (versions are managed by the `j2html-to
 ## Quick start (core template engine)
 
 ```java
-import dev.rebelcraft.j2html.toolkit.templates.HtmlComponent;
-import dev.rebelcraft.j2html.toolkit.templates.J2HtmlEngine;
-import dev.rebelcraft.j2html.toolkit.templates.RenderContext;
+import io.github.teggr.j2html.toolkit.templates.HtmlComponent;
+import io.github.teggr.j2html.toolkit.templates.J2HtmlEngine;
+import io.github.teggr.j2html.toolkit.templates.RenderContext;
 import j2html.tags.DomContent;
 
 import static j2html.TagCreator.div;
@@ -120,15 +120,15 @@ The engine now emits useful SLF4J logs for:
 Recommended Spring Boot logging levels:
 
 ```properties
-logging.level.dev.rebelcraft.j2html.toolkit.templates=DEBUG
-logging.level.dev.rebelcraft.j2html.toolkit.spring.templates=DEBUG
-logging.level.dev.rebelcraft.j2html.toolkit.spring.boot=INFO
+logging.level.io.github.teggr.j2html.toolkit.templates=DEBUG
+logging.level.io.github.teggr.j2html.toolkit.spring.templates=DEBUG
+logging.level.io.github.teggr.j2html.toolkit.spring.boot=INFO
 ```
 
 For deep cache diagnostics (template descriptor cache hit/miss), enable:
 
 ```properties
-logging.level.dev.rebelcraft.j2html.toolkit.templates=TRACE
+logging.level.io.github.teggr.j2html.toolkit.templates=TRACE
 ```
 
 ## Known limitation

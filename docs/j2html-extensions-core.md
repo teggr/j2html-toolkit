@@ -3,7 +3,7 @@
 Support for some missing tags: `PathTag`, `SvgTag`, `SymbolTag`, `UseTag`. The `ExtendedTagCreator` makes those available in the same way as the j2html library.
 
 ```java
-import dev.rebelcraft.j2html.ExtendedTagCreator;
+import io.github.teggr.j2html.ExtendedTagCreator;
 
 ExtendedTagCreator.svg();
 ExtendedTagCreator.path();
@@ -14,8 +14,8 @@ ExtendedTagCreator.symbol();
 Support for [Aria Roles, States and Properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 ```java
-import dev.rebelcraft.j2html.attributes.aria.AriaRoles;
-import dev.rebelcraft.j2html.attributes.aria.AriaStatesAndProperties;
+import io.github.teggr.j2html.attributes.aria.AriaRoles;
+import io.github.teggr.j2html.attributes.aria.AriaStatesAndProperties;
 
 import static j2html.TagCreator.div;
 

@@ -5,7 +5,7 @@
             "name": "Spring Boot-ExampleApplication<j2html-toolkit-examples-webapp>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "dev.rebelcraft.j2html.toolkit.example.ExampleApplication",
+            "mainClass": "io.github.teggr.j2html.toolkit.example.ExampleApplication",
             "projectName": "j2html-toolkit-examples-webapp",
             "args": "",
             "envFile": "${workspaceFolder}/.env"

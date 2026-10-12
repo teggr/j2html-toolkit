@@ -29,12 +29,12 @@ The components emit [Bootstrap](https://getbootstrap.com/) CSS classes (for exam
 ## Example
 
 ```java
-import dev.rebelcraft.j2html.toolkit.components.ai.AiChatLayouts;
-import dev.rebelcraft.j2html.toolkit.components.ai.AgentWorkspaceModel;
-import dev.rebelcraft.j2html.toolkit.components.ai.NotificationMessage;
-import dev.rebelcraft.j2html.toolkit.components.ai.NotificationTone;
-import dev.rebelcraft.j2html.toolkit.components.ai.SelectOption;
-import dev.rebelcraft.j2html.toolkit.components.ai.TranscriptMessage;
+import io.github.teggr.j2html.toolkit.components.ai.AiChatLayouts;
+import io.github.teggr.j2html.toolkit.components.ai.AgentWorkspaceModel;
+import io.github.teggr.j2html.toolkit.components.ai.NotificationMessage;
+import io.github.teggr.j2html.toolkit.components.ai.NotificationTone;
+import io.github.teggr.j2html.toolkit.components.ai.SelectOption;
+import io.github.teggr.j2html.toolkit.components.ai.TranscriptMessage;
 
 import java.util.List;
 
@@ -55,8 +55,8 @@ String html = AiChatLayouts.agentWorkspace(model).render();
 Streaming and tool timeline layout:
 
 ```java
-import dev.rebelcraft.j2html.toolkit.components.ai.StreamingToken;
-import dev.rebelcraft.j2html.toolkit.components.ai.ToolCallEvent;
+import io.github.teggr.j2html.toolkit.components.ai.StreamingToken;
+import io.github.teggr.j2html.toolkit.components.ai.ToolCallEvent;
 
 String html = AiChatLayouts.streamingWorkspace(
     model,

@@ -18,8 +18,8 @@ This brings the [Bootstrap](https://getbootstrap.com/) UI kit into the j2html ec
 
 Usage:
 ```java
-import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
-import dev.rebelcraft.j2html.attributes.aria.AriaRoles;
+import io.github.teggr.j2html.toolkit.integration.bootstrap.Bootstrap;
+import io.github.teggr.j2html.attributes.aria.AriaRoles;
 import static j2html.TagCreator.*;
 
 div()
