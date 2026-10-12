@@ -69,6 +69,8 @@ Add the following to your Maven `pom.xml` file.
 
 ```
 
+The list is illustrative: import the BOM once, then add only the toolkit modules your application uses. You do not need every module listed here.
+
 With the Spring Boot starter on the classpath, views are Spring beans that implement `HtmlComponent`. The starter auto-configures a `J2HtmlEngine` (scanning your application's packages for components) and a `J2HtmlViewResolver`, so a controller just returns the component's view name — derived from the class name in kebab-case, or set explicitly with `@HtmlTemplate("...")`.
 
 ```java
