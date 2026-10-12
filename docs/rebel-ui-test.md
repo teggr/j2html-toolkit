@@ -1,4 +1,6 @@
-# rebel-ui-test
+# UI test documentation helpers
+
+This is a test-time helper, not a module or artifact published by `j2html-toolkit`. The toolkit uses `dev.rebelcraft:java-html-toolkit-test-docs` (version `1.0.1`) with Maven `test` scope.
 
 A proof of concept UI testing framework based on [Spring MockMvc](https://docs.spring.io/spring-framework/reference/testing/mockmvc/overview.html).
 
@@ -8,6 +10,7 @@ A proof of concept UI testing framework based on [Spring MockMvc](https://docs.s
 
 ```java
   import dev.rebelcraft.j2html.toolkit.integration.bootstrap.Bootstrap;
+  import dev.rebelcraft.j2html.attributes.aria.AriaRoles;
   import dev.rebelcraft.uitest.UiDocumentation;
   import org.junit.jupiter.api.BeforeEach;
   import org.junit.jupiter.api.Test;

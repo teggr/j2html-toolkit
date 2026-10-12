@@ -31,77 +31,16 @@ jobs:
         env:
           CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
           CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          import os
-          import xml.etree.ElementTree as ET
-          from pathlib import Path
-
-          settings_path = Path.home() / ".m2" / "settings.xml"
-          settings_path.parent.mkdir(parents=True, exist_ok=True)
-
-          if settings_path.exists():
-              tree = ET.parse(settings_path)
-              root = tree.getroot()
-          else:
-              root = ET.Element("{http://maven.apache.org/SETTINGS/1.2.0}settings")
-              tree = ET.ElementTree(root)
-
-          namespace = root.tag.split("}", 1)[0].lstrip("{") if "}" in root.tag else ""
-          ET.register_namespace("", namespace)
-          prefix = f"{{{namespace}}}" if namespace else ""
-          servers = root.find(f"{prefix}servers")
-          if servers is None:
-              servers = ET.SubElement(root, f"{prefix}servers")
-
-          server = next(
-              (
-                  item
-                  for item in servers.findall(f"{prefix}server")
-                  if item.findtext(f"{prefix}id") == "central"
-              ),
-              None,
-          )
-          if server is None:
-              server = ET.SubElement(servers, f"{prefix}server")
-              ET.SubElement(server, f"{prefix}id").text = "central"
-
-          for name, value in (
-              ("username", os.environ["CENTRAL_USERNAME"]),
-              ("password", os.environ["CENTRAL_PASSWORD"]),
-          ):
-              element = server.find(f"{prefix}{name}")
-              if element is None:
-                  element = ET.SubElement(server, f"{prefix}{name}")
-              element.text = value
-
-          ET.indent(tree, space="  ")
-          tree.write(settings_path, encoding="utf-8", xml_declaration=True)
-          PY
+        run: jbang jbang/releaseWorkflow.java configure-settings
 
       - name: Determine release version
         id: version
-        shell: bash
         run: |
           if [[ "$GITHUB_REF_TYPE" != "branch" ]]; then
             echo "Run this workflow from a branch, not a tag." >&2
             exit 1
           fi
-          python3 - <<'PY'
-          import os
-          import xml.etree.ElementTree as ET
-
-          namespace = {"m": "http://maven.apache.org/POM/4.0.0"}
-          root = ET.parse("pom.xml").getroot()
-          version = root.findtext("m:version", namespaces=namespace)
-          suffix = "-SNAPSHOT"
-          if not version or not version.endswith(suffix):
-              raise SystemExit("The root POM version must end in -SNAPSHOT.")
-          release = version[:-len(suffix)]
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
-              output.write(f"release={release}\n")
-          PY
+          jbang jbang/releaseWorkflow.java determine-release-version
 
       - name: Test release documentation version sync
         run: jbang jbang/syncReleaseDocumentation.java --self-test

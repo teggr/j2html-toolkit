@@ -8,15 +8,31 @@ A collection of extensions for the [j2html](https://j2html.com) library, used fo
 
 * [essentials](/docs/j2html-extensions-core.md) - Extensions for the core j2html classes and creators
 * [integration/tools](/docs/j2html-extensions-tools.md) - Standalone module with utilities for generating code
-* [rebel-ui-test](/docs/rebel-ui-test.md) - Standalone module for testing UI rendering
+* [UI test documentation helpers](/docs/rebel-ui-test.md) - Test-scoped documentation helpers; not a toolkit module
 * [ai components](/components/ai/README.md) - Reusable Bootstrap-compatible j2html components for AI chat and agent-style UIs
 * [integration/bootstrap](/docs/bootstrap-j2html-extension.md) - Bootstrap lib
 * [integration/htmx](/docs/htmx-j2html-extension.md) - HTMX attributes
 * [spring/boot-starter](/docs/j2html-template-engine.md) - Spring Boot starter for the template engine
 * [template-engine](/docs/j2html-template-engine.md) - Template engine and Spring integrations for j2html
 
-The browser-focused integration modules now live under `integration/` in the Maven reactor.
-Spring-focused modules now live under `spring/` in the Maven reactor.
+## Published modules
+
+These standalone artifacts are managed by `j2html-toolkit-bom`. The listed path is the module's Maven directory.
+
+| Maven coordinate | Module path |
+| --- | --- |
+| `io.github.teggr:j2html-toolkit-components-ai` | `components/ai` |
+| `io.github.teggr:j2html-toolkit-essentials` | `essentials` |
+| `io.github.teggr:j2html-toolkit-integration-bootstrap` | `integration/bootstrap` |
+| `io.github.teggr:j2html-toolkit-integration-htmx` | `integration/htmx` |
+| `io.github.teggr:j2html-toolkit-integration-tools-api` | `integration/tools/api` |
+| `io.github.teggr:j2html-toolkit-integration-tools-plugin` | `integration/tools/plugin` |
+| `io.github.teggr:j2html-toolkit-preview` | `preview` |
+| `io.github.teggr:j2html-toolkit-spring-boot-starter` | `spring/boot-starter` |
+| `io.github.teggr:j2html-toolkit-spring-template-engine` | `spring/template-engine` |
+| `io.github.teggr:j2html-toolkit-template-engine` | `template-engine` |
+
+The parent POMs, BOM, and examples are reactor modules but are not standalone library artifacts in this table.
 
 # Quick Start
 
@@ -105,6 +121,7 @@ JDK 17 or newer is required to build and test this repository.
 
 ```bash
 ./mvnw --no-transfer-progress test
+jbang jbang/checkProjectConsistency.java
 ```
 
 [RELEASE.md](/docs/RELEASE.md)

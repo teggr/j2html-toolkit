@@ -24,5 +24,11 @@ jobs:
           java-version: '17'
           cache: maven
 
+      - name: Set up JBang
+        uses: jbangdev/setup-jbang@v0.1.1
+
+      - name: Check published coordinates and documentation links
+        run: jbang jbang/checkProjectConsistency.java
+
       - name: Run tests
         run: ./mvnw --no-transfer-progress test

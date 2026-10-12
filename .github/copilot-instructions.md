@@ -34,6 +34,7 @@ This repository is a Java toolkit for extending and integrating the j2html libra
 
 ## Coding preferences
 - Prefer clear, readable Java with small focused classes and methods.
+- For repository automation and scripts, prefer Java-based JBang scripts over Python when both are suitable. Use Python only when JBang/Java is not a reasonable fit or interoperability requires it.
 - Preserve the existing style of the codebase rather than introducing unrelated abstractions.
 - Keep changes compatible with the current Maven module layout and existing public APIs where possible.
 - When changing shared abstractions, ensure downstream modules and examples continue to work.
