@@ -19,16 +19,63 @@ jobs:
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
-        env:
-          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
-          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
         with:
           distribution: temurin
           java-version: '17'
           cache: maven
-          server-id: central
-          server-username: CENTRAL_USERNAME
-          server-password: CENTRAL_PASSWORD
+
+      - name: Configure Maven Central credentials
+        env:
+          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          settings_path = Path.home() / ".m2" / "settings.xml"
+          settings_path.parent.mkdir(parents=True, exist_ok=True)
+
+          if settings_path.exists():
+              tree = ET.parse(settings_path)
+              root = tree.getroot()
+          else:
+              root = ET.Element("{http://maven.apache.org/SETTINGS/1.2.0}settings")
+              tree = ET.ElementTree(root)
+
+          namespace = root.tag.split("}", 1)[0].lstrip("{") if "}" in root.tag else ""
+          ET.register_namespace("", namespace)
+          prefix = f"{{{namespace}}}" if namespace else ""
+          servers = root.find(f"{prefix}servers")
+          if servers is None:
+              servers = ET.SubElement(root, f"{prefix}servers")
+
+          server = next(
+              (
+                  item
+                  for item in servers.findall(f"{prefix}server")
+                  if item.findtext(f"{prefix}id") == "central"
+              ),
+              None,
+          )
+          if server is None:
+              server = ET.SubElement(servers, f"{prefix}server")
+              ET.SubElement(server, f"{prefix}id").text = "central"
+
+          for name, value in (
+              ("username", os.environ["CENTRAL_USERNAME"]),
+              ("password", os.environ["CENTRAL_PASSWORD"]),
+          ):
+              element = server.find(f"{prefix}{name}")
+              if element is None:
+                  element = ET.SubElement(server, f"{prefix}{name}")
+              element.text = value
+
+          ET.indent(tree, space="  ")
+          tree.write(settings_path, encoding="utf-8", xml_declaration=True)
+          PY
 
       - name: Determine release version
         id: version
@@ -94,8 +141,6 @@ jobs:
 
       - name: Publish to Maven Central
         env:
-          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
-          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: ./mvnw --no-transfer-progress -Pcentral deploy -DignorePublishedComponents=true "-Dgpg.keyname=$GPG_KEY_ID"
