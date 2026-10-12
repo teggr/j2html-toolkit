@@ -81,32 +81,10 @@ jobs:
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: |
           mkdir -p "$HOME/.gnupg"
           chmod 700 "$HOME/.gnupg"
           printf '%s' "$GPG_PRIVATE_KEY" | gpg --batch --import
-          printf '%s\n' 'pinentry-mode loopback' >> "$HOME/.gnupg/gpg.conf"
-          python3 - <<'PY'
-          import os
-          import xml.etree.ElementTree as ET
-          from pathlib import Path
-
-          settings_path = Path.home() / ".m2" / "settings.xml"
-          tree = ET.parse(settings_path)
-          root = tree.getroot()
-          namespace = root.tag.split("}", 1)[0].lstrip("{") if "}" in root.tag else ""
-          prefix = f"{{{namespace}}}" if namespace else ""
-          servers = root.find(f"{prefix}servers")
-          if servers is None:
-              servers = ET.SubElement(root, f"{prefix}servers")
-
-          server = ET.SubElement(servers, f"{prefix}server")
-          ET.SubElement(server, f"{prefix}id").text = os.environ["GPG_KEY_ID"]
-          ET.SubElement(server, f"{prefix}password").text = os.environ["GPG_PASSPHRASE"]
-          ET.indent(tree, space="  ")
-          tree.write(settings_path, encoding="utf-8", xml_declaration=True)
-          PY
 
       - name: Set release versions
         run: ./mvnw --no-transfer-progress -Pcentral versions:set -DremoveSnapshot -DprocessAllModules -DgenerateBackupPoms=false
@@ -117,6 +95,7 @@ jobs:
       - name: Publish to Maven Central
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: ./mvnw --no-transfer-progress -Pcentral deploy -DignorePublishedComponents=true "-Dgpg.keyname=$GPG_KEY_ID"
 
       - name: Create GitHub Release
