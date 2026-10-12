@@ -24,6 +24,9 @@ jobs:
           java-version: '17'
           cache: maven
 
+      - name: Set up JBang
+        uses: jbangdev/setup-jbang@v0.1.1
+
       - name: Configure Maven Central credentials
         env:
           CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
@@ -100,6 +103,9 @@ jobs:
               output.write(f"release={release}\n")
           PY
 
+      - name: Test release documentation version sync
+        run: jbang jbang/syncReleaseDocumentation.java --self-test
+
       - name: Check release tag
         id: existing_release
         env:
@@ -143,7 +149,7 @@ jobs:
         env:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: ./mvnw --no-transfer-progress -Pcentral deploy -DignorePublishedComponents=true "-Dgpg.keyname=$GPG_KEY_ID"
+        run: ./mvnw --no-transfer-progress -Pcentral -pl '!examples,!examples/webapp' deploy -DignorePublishedComponents=true "-Dgpg.keyname=$GPG_KEY_ID"
 
       - name: Create GitHub Release
         if: steps.existing_release.outputs.exists != 'true'
@@ -155,12 +161,17 @@ jobs:
       - name: Set next snapshot versions
         run: ./mvnw --no-transfer-progress -Pcentral versions:set -DnextSnapshot -DprocessAllModules -DgenerateBackupPoms=false
 
+      - name: Update documentation versions
+        env:
+          RELEASE_VERSION: ${{ steps.version.outputs.release }}
+        run: jbang jbang/syncReleaseDocumentation.java "$RELEASE_VERSION"
+
       - name: Commit and push next snapshot
         env:
           RELEASE_VERSION: ${{ steps.version.outputs.release }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- pom.xml ':(glob)**/pom.xml'
+          git add -- pom.xml ':(glob)**/pom.xml' README.md docs/RELEASE.md jbang/j2htmlInit.java verification/release-consumer/pom.xml
           git commit -m "chore: prepare for next development iteration after $RELEASE_VERSION"
           git push origin "HEAD:$GITHUB_REF"

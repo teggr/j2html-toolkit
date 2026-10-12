@@ -27,14 +27,14 @@ import java.util.Scanner;
 
 public class j2htmlInit {
 
-    private static final String GROUP_ID = "dev.rebelcraft";
-    private static final String BOM_ARTIFACT_ID = "j2html-extensions-bom";
+    private static final String GROUP_ID = "io.github.teggr";
+    private static final String BOM_ARTIFACT_ID = "j2html-toolkit-bom";
     private static final List<String> DEFAULT_ARTIFACTS = List.of(
-            "j2html-extensions-spring-boot-starter",
-            "bootstrap-j2html-extension",
-            "htmx-j2html-extension"
+            "j2html-toolkit-spring-boot-starter",
+            "j2html-toolkit-integration-bootstrap",
+            "j2html-toolkit-integration-htmx"
     );
-    private static final String FALLBACK_VERSION = "0.0.3";
+    private static final String FALLBACK_VERSION = "0.0.5";
 
     public static void main(String[] args) throws Exception {
         Options options = Options.parse(args);
@@ -216,8 +216,8 @@ public class j2htmlInit {
 
     private static String findLatestBomVersion() {
         List<String> metadataUrls = List.of(
-                "https://repo1.maven.org/maven2/dev/rebelcraft/j2html-extensions-bom/maven-metadata.xml",
-                "https://repo.maven.apache.org/maven2/dev/rebelcraft/j2html-extensions-bom/maven-metadata.xml"
+                "https://repo1.maven.org/maven2/io/github/teggr/j2html-toolkit-bom/maven-metadata.xml",
+                "https://repo.maven.apache.org/maven2/io/github/teggr/j2html-toolkit-bom/maven-metadata.xml"
         );
 
         for (String metadataUrl : metadataUrls) {
