@@ -38,6 +38,11 @@
             </dependency>
             <dependency>
                 <groupId>io.github.teggr</groupId>
+                <artifactId>j2html-toolkit-integration-tools-plugin</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.teggr</groupId>
                 <artifactId>j2html-toolkit-template-engine</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -56,7 +61,7 @@
                 <artifactId>j2html-toolkit-preview</artifactId>
                 <version>${project.version}</version>
             </dependency>
-             <dependency>
+            <dependency>
                 <groupId>io.github.teggr</groupId>
                 <artifactId>j2html-toolkit-integration-tools-api</artifactId>
                 <version>${project.version}</version>

@@ -2,6 +2,8 @@
 
 Support for generating Java classes containing the CSS class names from published CSS libraries.
 
+The reactor contains two standalone artifacts: `j2html-toolkit-integration-tools-api` at `integration/tools/api`, and `j2html-toolkit-integration-tools-plugin` at `integration/tools/plugin`. Use the plugin dependency below to run the generator from Maven.
+
 * Quick support for any CSS library
 * Auto complete for CSS classes within Java classes
 
@@ -13,10 +15,10 @@ Support for generating Java classes containing the CSS class names from publishe
     <configuration>
         <mainClass>dev.rebelcraft.j2html.toolkit.integration.tools.ExtractCssClassesToJava</mainClass>
         <arguments>
-            <argument>${project.basedir}\src\bootstrap\css\bootstrap.css</argument>
+        <argument>${project.basedir}/src/bootstrap/css/bootstrap.css</argument>
             <argument>dev.rebelcraft.j2html.toolkit.integration.bootstrap</argument>
             <argument>Bootstrap</argument>
-            <argument>${project.basedir}\src\main\java</argument>
+        <argument>${project.basedir}/src/main/java</argument>
         </arguments>
         <includePluginDependencies>true</includePluginDependencies>
     </configuration>
