@@ -11,7 +11,7 @@ This brings the [Bootstrap](https://getbootstrap.com/) UI kit into the j2html ec
 
 ```xml
 <dependency>
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit-integration-bootstrap</artifactId>
 </dependency>
 ```

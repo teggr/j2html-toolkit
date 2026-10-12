@@ -1,44 +1,41 @@
-# Release the artefacts to maven
+# Release the artefacts to Maven Central
 
-```shell
-# clear out 
-mvn clean
+Releases are started manually from GitHub Actions. The workflow publishes the snapshot version as a release, creates a matching GitHub Release, then advances the selected branch to the next patch snapshot.
 
-# tag the code
-git tag <version>
+## Configure repository secrets
 
-# set the version for all extensions and then the example webapp
-mvn -Pcentral versions:set -DremoveSnapshot -DprocessAllModules
-mvn -Pcentral --projects spring/j2html-example-webapp versions:set -DremoveSnapshot
+Add these actions secrets under **Settings > Secrets and variables > Actions**:
 
-# check that the poms are correct
-mvn -Pcentral org.kordamp.maven:pomchecker-maven-plugin:1.14.0:check-maven-central
-# deploy new version to central
-mvn -Pcentral deploy -DignorePublishedComponents=true
+| Secret | Value |
+| --- | --- |
+| `CENTRAL_USERNAME` | Username from a Sonatype Central user token |
+| `CENTRAL_PASSWORD` | Password from the same Sonatype Central user token |
+| `GPG_KEY_ID` | ID or fingerprint of the signing key |
+| `GPG_PRIVATE_KEY` | ASCII-armored private signing key |
+| `GPG_PASSPHRASE` | Passphrase for the signing key |
 
-# set the new versions for all extensions and then the example webapp
-mvn -Pcentral versions:set -DnextSnapshot -DprocessAllModules
-mvn -Pcentral --projects spring/j2html-example-webapp versions:set -DnextSnapshot
+Before publishing under `io.github.teggr`, verify that this namespace is registered to the account used by the Central publishing credentials.
 
-# commit the new versions for all extensions and the example webapp
-mvn -Pcentral versions:commit -DprocessAllModules
-mvn -Pcentral --projects spring/j2html-example-webapp versions:commit
+The workflow needs `contents: write` permission to create the GitHub Release and push the next-snapshot POM changes. The selected branch must allow pushes from `github-actions[bot]`; adjust branch protection or dispatch from a branch where the workflow is allowed to push.
 
-# commit and push the github repo
+## Publish a release
 
-# create github release
-https://github.com/teggr/j2html-toolkit/releases
-```
+1. Ensure the branch to release has a root POM version ending in `-SNAPSHOT`, for example `0.0.4-SNAPSHOT`.
+2. Open **Actions > Publish release > Run workflow**, select the branch, and run it.
+3. The workflow removes `-SNAPSHOT` from the current version and deploys the artifacts with the `central` Maven profile. It runs the Maven Central POM checker before deployment, automatically publishes a valid deployment, and waits for Maven Central publication to complete.
+4. After a successful Maven Central deployment, the workflow creates a GitHub Release tagged with that release version and GitHub-generated release notes.
+5. The workflow advances the POM versions to the next patch snapshot (for example, `0.0.4-SNAPSHOT` to `0.0.5-SNAPSHOT`) and commits/pushes that change to the selected branch.
 
-For manual publishing: https://central.sonatype.com/publishing/deployments (GH)
+The workflow does not create a GitHub Release or push a version change if Maven Central deployment fails. If the release already exists for the same source commit, a rerun reuses it so the snapshot-version commit can be retried.
 
-## Plugins
+## Build requirements
 
-* https://www.mojohaus.org/versions/versionsmaven-plugin/index.html
-* https://maven.apache.org/plugins/maven-gpg-plugin/index.html
-* https://kordamp.org/pomchecker/pomchecker-maven-plugin/index.html
+JDK 17 or newer is required to build, test, and publish this repository.
 
 ## Maintenance
 
-* https://central.sonatype.com/publishing
-* https://central.sonatype.com/search?q=dev.rebelcraft
+* [Sonatype Central publishing](https://central.sonatype.com/publishing)
+* [Sonatype Central deployments](https://central.sonatype.com/publishing/deployments)
+* [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/)
+* [Maven Versions Plugin](https://www.mojohaus.org/versions/versions-maven-plugin/)
+* [POM Checker](https://kordamp.org/pomchecker/pomchecker-maven-plugin/)

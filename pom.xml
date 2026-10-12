@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.rebelcraft</groupId>
+    <groupId>io.github.teggr</groupId>
     <artifactId>j2html-toolkit</artifactId>
     <version>0.0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -17,7 +17,7 @@
 
         <!-- build props -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
 
         <!-- version props -->
         <j2html.version>1.6.0</j2html.version>
@@ -130,8 +130,8 @@
                         <configuration>
                             <rules>
                                 <requireJavaVersion>
-                                    <version>[21,)</version>
-                                    <message>JDK 21 or newer is required to build this repository.</message>
+                                    <version>[17,)</version>
+                                    <message>JDK 17 or newer is required to build this repository.</message>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
@@ -222,6 +222,8 @@
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                            <waitUntil>published</waitUntil>
                             <ignorePublishedComponents>true</ignorePublishedComponents>
                         </configuration>
                     </plugin>

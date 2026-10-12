@@ -22,7 +22,7 @@ Support for generating Java classes containing the CSS class names from publishe
     </configuration>
     <dependencies>
         <dependency>
-            <groupId>dev.rebelcraft</groupId>
+            <groupId>io.github.teggr</groupId>
             <artifactId>j2html-toolkit-integration-tools-plugin</artifactId>
             <version>${project.version}</version>
         </dependency>
