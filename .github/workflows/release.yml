@@ -60,7 +60,7 @@ jobs:
           RELEASE_VERSION: ${{ steps.version.outputs.release }}
         shell: bash
         run: |
-          existing_release="$(gh release list --limit 1000 --json tagName --jq '.[] | select(.tagName == strenv(RELEASE_VERSION)) | .tagName')"
+          existing_release="$(gh release list --limit 1000 --json tagName | jq -r --arg release "$RELEASE_VERSION" '.[] | select(.tagName == $release) | .tagName')"
           if [[ -n "$existing_release" ]]; then
             existing_commit="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${RELEASE_VERSION}" --jq .sha)"
             if [[ "$existing_commit" != "$GITHUB_SHA" ]]; then
