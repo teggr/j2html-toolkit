@@ -47,8 +47,7 @@ public class syncReleaseDocumentation {
         List<Path> paths = List.of(
                 root.resolve("README.md"),
                 root.resolve("docs/RELEASE.md"),
-                root.resolve("jbang/j2htmlInit.java"),
-                root.resolve("verification/release-consumer/pom.xml")
+                root.resolve("jbang/j2htmlInit.java")
         );
         List<String> content = new ArrayList<>();
         for (Path path : paths) {
@@ -58,8 +57,7 @@ public class syncReleaseDocumentation {
         List<String> updated = List.of(
                 replaceExactlyOnce(content.get(0), BOM_VERSION_PATTERN, releaseVersion, "README BOM import"),
                 replaceExactlyOnce(content.get(1), DEV_VERSION_PATTERN, snapshotVersion, "release guide development version"),
-                replaceExactlyOnce(content.get(2), JBANG_FALLBACK_PATTERN, releaseVersion, "JBang fallback version"),
-                replaceExactlyOnce(content.get(3), BOM_VERSION_PATTERN, releaseVersion, "consumer smoke-test BOM import")
+                replaceExactlyOnce(content.get(2), JBANG_FALLBACK_PATTERN, releaseVersion, "JBang fallback version")
         );
 
         for (int i = 0; i < paths.size(); i++) {
@@ -118,15 +116,12 @@ public class syncReleaseDocumentation {
         String readme = "<artifactId>j2html-toolkit-bom</artifactId><version>stale</version>";
         String releaseDoc = "The current development version of the toolkit is `stale`, as declared by the root POM.";
         String jbang = "private static final String FALLBACK_VERSION = \"stale\";";
-        String consumerPom = "<artifactId>j2html-toolkit-bom</artifactId><version>stale</version>";
 
         requireContains(replaceExactlyOnce(readme, BOM_VERSION_PATTERN, "1.2.3", "test README"), "<version>1.2.3</version>");
         requireContains(replaceExactlyOnce(releaseDoc, DEV_VERSION_PATTERN, "1.2.4-SNAPSHOT", "test development docs"),
                 "`1.2.4-SNAPSHOT`");
         requireContains(replaceExactlyOnce(jbang, JBANG_FALLBACK_PATTERN, "1.2.3", "test JBang fallback"),
                 "FALLBACK_VERSION = \"1.2.3\"");
-        requireContains(replaceExactlyOnce(consumerPom, BOM_VERSION_PATTERN, "1.2.3", "test consumer POM"),
-                "<version>1.2.3</version>");
 
         try {
             replaceExactlyOnce(readme + readme, BOM_VERSION_PATTERN, "1.2.3", "duplicate test");
