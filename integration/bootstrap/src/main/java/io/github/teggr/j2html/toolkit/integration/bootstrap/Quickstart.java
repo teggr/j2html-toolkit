@@ -1,0 +1,41 @@
+package io.github.teggr.j2html.toolkit.integration.bootstrap;
+
+import j2html.tags.specialized.HtmlTag;
+
+import static io.github.teggr.j2html.toolkit.integration.bootstrap.BootstrapTagCreator.*;
+import static j2html.TagCreator.*;
+
+import io.github.teggr.j2html.ExtendedTagCreator;
+
+/**
+ * <pre>
+ *     https://getbootstrap.com/docs/5.3/getting-started/introduction/
+ * </pre>
+ */
+public class Quickstart {
+
+    public static String index() {
+
+        return ExtendedTagCreator.document(
+                indexDomContent()
+        );
+
+    }
+
+    public static HtmlTag indexDomContent() {
+        return html().withLang("en")
+                .with(
+                        head(
+                                utf8Charset(),
+                                responsiveViewport(),
+                                title("Bootstrap demo"),
+                                cdnCSSLink()
+                        ),
+                        body(
+                                h1("Hello, world!"),
+                                cdnBundleMinJSLink()
+                        )
+                );
+    }
+
+}

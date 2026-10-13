@@ -16,8 +16,8 @@ This brings the [HTMX](https://htmx.org/) tools for HTML into the j2html ecosyst
 
 Usage:
 ```java
-import static dev.rebelcraft.j2html.toolkit.integration.htmx.HtmxAttributes.*;
-import static dev.rebelcraft.j2html.toolkit.integration.htmx.Htmx.*;
+import static io.github.teggr.j2html.toolkit.integration.htmx.HtmxAttributes.*;
+import static io.github.teggr.j2html.toolkit.integration.htmx.Htmx.*;
 import static j2html.TagCreator.*;
 
 // add as attributes

@@ -13,10 +13,10 @@ The reactor contains two standalone artifacts: `j2html-toolkit-integration-tools
     <artifactId>exec-maven-plugin</artifactId>
     <version>3.1.0</version>
     <configuration>
-        <mainClass>dev.rebelcraft.j2html.toolkit.integration.tools.ExtractCssClassesToJava</mainClass>
+        <mainClass>io.github.teggr.j2html.toolkit.integration.tools.ExtractCssClassesToJava</mainClass>
         <arguments>
         <argument>${project.basedir}/src/bootstrap/css/bootstrap.css</argument>
-            <argument>dev.rebelcraft.j2html.toolkit.integration.bootstrap</argument>
+            <argument>io.github.teggr.j2html.toolkit.integration.bootstrap</argument>
             <argument>Bootstrap</argument>
         <argument>${project.basedir}/src/main/java</argument>
         </arguments>
