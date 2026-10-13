@@ -34,7 +34,7 @@ public class j2htmlInit {
             "j2html-toolkit-integration-bootstrap",
             "j2html-toolkit-integration-htmx"
     );
-    private static final String FALLBACK_VERSION = "0.0.5";
+    private static final String FALLBACK_VERSION = "0.0.6";
 
     public static void main(String[] args) throws Exception {
         Options options = Options.parse(args);

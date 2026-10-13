@@ -2,7 +2,7 @@
 
 Releases are started manually from GitHub Actions. The workflow publishes the snapshot version as a release, creates a matching GitHub Release, then advances the selected branch to the next patch snapshot.
 
-The current development version of the toolkit is `0.0.6-SNAPSHOT`, as declared by the root POM. Consumer examples use the latest published release instead.
+The current development version of the toolkit is `0.0.7-SNAPSHOT`, as declared by the root POM. Consumer examples use the latest published release instead.
 
 ## Configure repository secrets
 
